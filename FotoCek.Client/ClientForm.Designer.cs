@@ -90,7 +90,7 @@
             this.imgConnectionStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgConnectionStatus.TabIndex = 23;
             this.imgConnectionStatus.TabStop = false;
-            this.imgConnectionStatus.Visible = false;
+            this.imgConnectionStatus.DoubleClick += new System.EventHandler(this.imgConnectionStatus_DoubleClick);
             // 
             // lblTarih
             // 
@@ -142,8 +142,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Toscelik Turnike Client";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxGirenKisiResmi)).EndInit();
             this.panel1.ResumeLayout(false);

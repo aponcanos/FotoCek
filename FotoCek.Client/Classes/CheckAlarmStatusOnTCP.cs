@@ -1,5 +1,4 @@
-﻿using FotoCek.Business.Classes.ReadTCP;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;

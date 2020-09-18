@@ -42,16 +42,18 @@ namespace FotoCek.Business.Abstract
 
         public Image GetSnapshot(DateTime eventDate, string kameraKayitYolu)
         {
-            //SONRADAN EKLENEN
-            KaydedilecekKlasor = kameraKayitYolu + eventDate.ToString("yyyyMMdd") + @"\";
-            DirectoryInfo directoryInfo = Directory.CreateDirectory(KaydedilecekKlasor);
+            ////SONRADAN EKLENEN
+            //KaydedilecekKlasor = kameraKayitYolu + eventDate.ToString("yyyyMMdd") + @"\";
+            //DirectoryInfo directoryInfo = Directory.CreateDirectory(KaydedilecekKlasor);
 
 
-            this.DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss");
-            pbxGelenResim.WaitOnLoad = false;
-            pbxGelenResim.LoadAsync(@"http://"+ IP +":"+HTTPPort+ "/cgi-bin/image.cgi?userName="+UserName+"&password="+Password+"&cameraID=1&quality=5");
-            pbxGelenResim.LoadCompleted += PbxGelenResim_LoadCompleted;
-            return pbxGelenResim.Image;
+            //this.DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss");
+            //pbxGelenResim.WaitOnLoad = false;
+            //pbxGelenResim.LoadAsync(@"http://"+ IP +":"+HTTPPort+ "/cgi-bin/image.cgi?userName="+UserName+"&password="+Password+"&cameraID=1&quality=5");
+            //pbxGelenResim.LoadCompleted += PbxGelenResim_LoadCompleted;
+
+            Image img = Image.FromFile(@"C:\Users\BD\Pictures\2.jpg");
+            return img;
         }
 
         private void PbxGelenResim_LoadCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)

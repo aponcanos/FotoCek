@@ -8,12 +8,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using SimpleTCP;
 
 namespace FotoCek.Client
 {
     public partial class Form1 : Form
     {
-       
+        SimpleTcpClient client;
         public Form1()
         {
             InitializeComponent();
@@ -36,19 +37,26 @@ namespace FotoCek.Client
             lblTarih.Text = DateTime.Now.ToLongTimeString();
         }
 
-        
-      
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void imgConnectionStatus_DoubleClick(object sender, EventArgs e)
         {
-         
+            client = new SimpleTcpClient().Connect("127.0.0.1", 3380);
+            client.DataReceived += Client_DataReceived;
         }
 
-      
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Client_DataReceived(object sender, SimpleTCP.Message e)
         {
-            
+            Image img = byteArrayToImage(e.Data);
+            pbxGirenKisiResmi.Image = img;
         }
+
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
+
     }
 
     
