@@ -17,14 +17,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FotoCek.Business.Classes.INI;
+using Ini.Net;
+
+
 
 namespace FotoCekimi
 {
     public partial class ServerForm : Form
     {
-
-
-
         List<Camera> _allCameras;
         TcpClient _client;
         List<TcpClient> _connectedPCList, _connectedCameraList;
@@ -47,6 +48,10 @@ namespace FotoCekimi
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
+
+
+            INIReadWrite.readWriteIniFile();
+
 
             _context = new DatabaseContext();
             _lstAllCameraIPList = (from x in _context.Cameras select x.IP).ToArray();
@@ -155,7 +160,7 @@ namespace FotoCekimi
                 }
                 /////////////////////////////////////////////////////////////
 
-               
+
             }
 
 
