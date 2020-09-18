@@ -22,6 +22,7 @@ namespace FotoCekimi
 {
     public partial class ServerForm : Form
     {
+
         List<Camera> _allCameras;
         TcpClient _client;
         List<TcpClient> _connectedPCList, _connectedCameraList;
