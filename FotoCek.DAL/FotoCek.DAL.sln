@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.DAL", "FotoCek.DAL.csproj", "{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF905DA8-AED6-4396-B631-DF00A5A5D010}
+	EndGlobalSection
+EndGlobal

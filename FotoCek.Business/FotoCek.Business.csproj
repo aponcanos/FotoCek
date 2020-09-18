@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0864CBA1-CD44-4942-89A5-83159656BEE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FotoCek.Business</RootNamespace>
+    <AssemblyName>FotoCek.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\GetData.cs" />
+    <Compile Include="Classes\Logging\LoggerToArea.cs" />
+    <Compile Include="Classes\OnlineKullanici.cs" />
+    <Compile Include="Classes\ReadTCP\CheckAlarmStatusOnTCP.cs" />
+    <Compile Include="Classes\ReadTCP\ClientNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Snapshots\ResimCek.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Flags\bayrakAL.png" />
+    <Content Include="Resources\Flags\bayrakAUS.PNG" />
+    <Content Include="Resources\Flags\bayrakAZE.png" />
+    <Content Include="Resources\Flags\bayrakBEL.PNG" />
+    <Content Include="Resources\Flags\bayrakBGR.png" />
+    <Content Include="Resources\Flags\bayrakBIH.PNG" />
+    <Content Include="Resources\Flags\bayrakBLR.PNG" />
+    <Content Include="Resources\Flags\bayrakCY.PNG" />
+    <Content Include="Resources\Flags\bayrakCZE.png" />
+    <Content Include="Resources\Flags\bayrakDEU.png" />
+    <Content Include="Resources\Flags\bayrakDNK.PNG" />
+    <Content Include="Resources\Flags\bayrakESP.PNG" />
+    <Content Include="Resources\Flags\bayrakEST.PNG" />
+    <Content Include="Resources\Flags\bayrakFIN.PNG" />
+    <Content Include="Resources\Flags\bayrakFRA.PNG" />
+    <Content Include="Resources\Flags\bayrakGBR.PNG" />
+    <Content Include="Resources\Flags\bayrakGEO.png" />
+    <Content Include="Resources\Flags\bayrakGRC.PNG" />
+    <Content Include="Resources\Flags\bayrakHRV.PNG" />
+    <Content Include="Resources\Flags\bayrakHUN.PNG" />
+    <Content Include="Resources\Flags\bayrakIRL.PNG" />
+    <Content Include="Resources\Flags\bayrakISR.PNG" />
+    <Content Include="Resources\Flags\bayrakITA.PNG" />
+    <Content Include="Resources\Flags\bayrakKAZ.PNG" />
+    <Content Include="Resources\Flags\bayrakLTU.PNG" />
+    <Content Include="Resources\Flags\bayrakLUX.PNG" />
+    <Content Include="Resources\Flags\bayrakLV.PNG" />
+    <Content Include="Resources\Flags\bayrakMAL.PNG" />
+    <Content Include="Resources\Flags\bayrakMDA.PNG" />
+    <Content Include="Resources\Flags\bayrakMKD.PNG" />
+    <Content Include="Resources\Flags\bayrakNLD.PNG" />
+    <Content Include="Resources\Flags\bayrakNOR.PNG" />
+    <Content Include="Resources\Flags\bayrakPOL.PNG" />
+    <Content Include="Resources\Flags\bayrakPRT.PNG" />
+    <Content Include="Resources\Flags\bayrakROU.png" />
+    <Content Include="Resources\Flags\bayrakRUS.PNG" />
+    <Content Include="Resources\Flags\bayrakSLO.PNG" />
+    <Content Include="Resources\Flags\bayrakSRB.PNG" />
+    <Content Include="Resources\Flags\bayrakSVK.PNG" />
+    <Content Include="Resources\Flags\bayrakSWN.PNG" />
+    <Content Include="Resources\Flags\bayrakSWZ.PNG" />
+    <Content Include="Resources\Flags\bayrakTR.png" />
+    <Content Include="Resources\Flags\bayrakTT.PNG" />
+    <Content Include="Resources\Flags\bayrakUK.PNG" />
+    <Content Include="Resources\Flags\bayrakUKR.png" />
+    <Content Include="Resources\Flags\bayrakUZ.PNG" />
+    <Content Include="Resources\Flags\bayrakVAT.PNG" />
+    <Content Include="Resources\Flags\bayramAUS.png" />
+    <Content Include="snipps.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DAL.csproj">
+      <Project>{49a57eff-53cf-40e9-9a66-7e5dd91ebe55}</Project>
+      <Name>FotoCek.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoCek.Entities\FotoCek.Entities.csproj">
+      <Project>{DFB23916-2018-43B2-873E-3604899B1A01}</Project>
+      <Name>FotoCek.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
