@@ -9,14 +9,13 @@ using System.Data;
 using System.Linq;
 using System.Net;
 using System.ServiceProcess;
+using FotoCek.Business.Abstract;
 
 namespace ImgServisi
 {
     public partial class FotoServisi : ServiceBase
     {
-        CheckAlarmStatusOnTCP _readTcp;
-        private List<Camera> _lstAllCameras;
-        private DatabaseContext _context;
+        private SimpleTCPServerListener TCPListenerServer;
 
         public FotoServisi()
         {
@@ -25,7 +24,7 @@ namespace ImgServisi
 
         protected override void OnStart(string[] args)
         {
-            
+            TCPListenerServer = new SimpleTCPServerListener();
         }
 
         protected override void OnStop()

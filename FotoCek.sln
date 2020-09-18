@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.GUI", "FotoCekimi\FotoCek.GUI.csproj", "{B33C3600-B7C8-4C00-A370-9D1884AE7711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.Service", "ImgServisi\FotoCek.Service.csproj", "{71AE922E-D38F-41DF-A51A-0DE09E6981F0}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{71092F40-5814-4C94-A467-AF7E24B2DEF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.Watchdog", "ImgServisiWatchDog\FotoCek.Watchdog.csproj", "{65197EB6-C219-4D24-BD7F-081E040295F1}"
 EndProject
@@ -33,8 +31,6 @@ Global
 		{71AE922E-D38F-41DF-A51A-0DE09E6981F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71AE922E-D38F-41DF-A51A-0DE09E6981F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71AE922E-D38F-41DF-A51A-0DE09E6981F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71092F40-5814-4C94-A467-AF7E24B2DEF4}.Debug|Any CPU.ActiveCfg = Debug
-		{71092F40-5814-4C94-A467-AF7E24B2DEF4}.Release|Any CPU.ActiveCfg = Release
 		{65197EB6-C219-4D24-BD7F-081E040295F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65197EB6-C219-4D24-BD7F-081E040295F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65197EB6-C219-4D24-BD7F-081E040295F1}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -10,10 +10,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FotoCek.Entities.DbClasses;
 
-namespace FotoCek.Business
+namespace FotoCek.Business.Abstract
 {
-    public class ResimCek
+    public class TakeSnapshot
     {
         string IP { get; set; }
         int HTTPPort { get; set; }
@@ -27,27 +28,26 @@ namespace FotoCek.Business
         public string KaydedilecekKlasor { get; set; }
         public PictureBox pbxGelenResim { get; set; }
 
-        public uint m_handle { get; set; }
 
      
-        public ResimCek(string IP, int HTTPPort, string CamUserName, string CamPass )
+        public TakeSnapshot(Camera camera )
         {
-            this.IP = IP;
-            this.HTTPPort = HTTPPort;
-            this.UserName = CamUserName;
-            this.Password = CamPass;
+            this.IP = camera.IP;
+            this.HTTPPort = camera.HTTPPort;
+            this.UserName = camera.UserName;
+            this.Password = camera.Password;
 
             pbxGelenResim = new PictureBox();
         }
 
-        public Image ResimGetir(DateTime girisTarihi, string kameraKayitYolu)
+        public Image GetSnapshot(DateTime eventDate, string kameraKayitYolu)
         {
             //SONRADAN EKLENEN
-            KaydedilecekKlasor = kameraKayitYolu + girisTarihi.ToString("yyyyMMdd") + @"\";
+            KaydedilecekKlasor = kameraKayitYolu + eventDate.ToString("yyyyMMdd") + @"\";
             DirectoryInfo directoryInfo = Directory.CreateDirectory(KaydedilecekKlasor);
 
 
-            this.DosyaIsmi = girisTarihi.ToString("yyyyMMddHHmmss");
+            this.DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss");
             pbxGelenResim.WaitOnLoad = false;
             pbxGelenResim.LoadAsync(@"http://"+ IP +":"+HTTPPort+ "/cgi-bin/image.cgi?userName="+UserName+"&password="+Password+"&cameraID=1&quality=5");
             pbxGelenResim.LoadCompleted += PbxGelenResim_LoadCompleted;

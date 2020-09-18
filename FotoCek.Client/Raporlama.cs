@@ -20,17 +20,11 @@ namespace FotoCek.Client
     public partial class Raporlama : Form
     {
         DatabaseContext _databaseContext;
-        GetData getData;
-        public TcpClient tcpClient { get; set; }
-        public string DosyaYolu { get; set; }
-        public string YazdirilacakResimYolu { get; set; }
 
         public Raporlama(TcpClient tcpClient)
         {
             InitializeComponent();
 
-             getData = new GetData();
-            this.tcpClient = tcpClient;
             _databaseContext = new DatabaseContext();
         }
 
@@ -82,38 +76,37 @@ namespace FotoCek.Client
 
         private void pctGirenKisiResmi_DoubleClick(object sender, EventArgs e)
         {
-            Process.Start(YazdirilacakResimYolu);
         }
 
         private void grdRapor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                var selectedRow = grdRapor.SelectedRows;
+            //try
+            //{
+            //    var selectedRow = grdRapor.SelectedRows;
 
-                int ID = Convert.ToInt32(selectedRow[0].Cells["ID"].Value);
-                string GirisTarihi = Convert.ToDateTime(selectedRow[0].Cells["GirisTarihi"].Value).ToString("yyyyMMdd");
-                int TurnikeID = Convert.ToInt32(selectedRow[0].Cells["TurnikeID"].Value);
-                var DosyaIsmi = selectedRow[0].Cells["DosyaIsmi"].Value;
+            //    int ID = Convert.ToInt32(selectedRow[0].Cells["ID"].Value);
+            //    string GirisTarihi = Convert.ToDateTime(selectedRow[0].Cells["GirisTarihi"].Value).ToString("yyyyMMdd");
+            //    int TurnikeID = Convert.ToInt32(selectedRow[0].Cells["TurnikeID"].Value);
+            //    var DosyaIsmi = selectedRow[0].Cells["DosyaIsmi"].Value;
 
-                var KameraKayitYolu = (_databaseContext.Cameras.Single(x => x.TurnikeID == TurnikeID)).RecordingPath;
+            //    var KameraKayitYolu = (_databaseContext.Cameras.Single(x => x.TurnikeID == TurnikeID)).RecordingPath;
 
-                var TurnikeKameraDosyaIsmi = (_databaseContext.MotionEvents.Single(x => x.ID == ID)).DosyaIsmi;
+            //    var TurnikeKameraDosyaIsmi = (_databaseContext.MotionEvents.Single(x => x.ID == ID)).DosyaIsmi;
                
-                YazdirilacakResimYolu = @KameraKayitYolu + GirisTarihi + @"\" + TurnikeKameraDosyaIsmi + ".jpg";
+            //    YazdirilacakResimYolu = @KameraKayitYolu + GirisTarihi + @"\" + TurnikeKameraDosyaIsmi + ".jpg";
 
-                pctGirenKisiResmi.Image = Image.FromFile(@YazdirilacakResimYolu);
+            //    pctGirenKisiResmi.Image = Image.FromFile(@YazdirilacakResimYolu);
 
-                //Serverdan üzerine tıklanılan resmi istemek için istek gönder
-                getData.GetDataFromServer(tcpClient, YazdirilacakResimYolu);
+            //    //Serverdan üzerine tıklanılan resmi istemek için istek gönder
+            //    getData.GetDataFromServer(tcpClient, YazdirilacakResimYolu);
 
                 
 
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Resim bulunamadı.", "Resim Bulunamadı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Resim bulunamadı.", "Resim Bulunamadı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }
