@@ -24,6 +24,7 @@ namespace FotoCekimi
     {
 
 
+
         List<Camera> _allCameras;
         TcpClient _client;
         List<TcpClient> _connectedPCList, _connectedCameraList;
