@@ -11,6 +11,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.AccessControl;
+using System.Windows.Forms;
 using FotoCek.Business.DependencyResolver;
 using FotoCek.DAL.Abstract;
 using Ninject;
@@ -25,7 +27,11 @@ namespace FotoCek.Business.Abstract
         private ICameraDal _cameraManager;
         private IMotionEventDal _motionEventManager;
         private ITakeSnapshotService _takeSnapshotService;
+
         private List<Camera> _allCameras;
+  
+
+
 
         public SimpleTCPServerListener()
         {
@@ -38,19 +44,14 @@ namespace FotoCek.Business.Abstract
 
             TCPListenerServer = new SimpleTcpServer().Start(Ayarlar.ServerPort);
             TCPListenerServer.DataReceived += Server_DataReceived;
-            TCPListenerServer.ClientConnected += TCPListenerServer_ClientConnected;
-
-
+          
         }
 
-        private void TCPListenerServer_ClientConnected(object sender, TcpClient e)
-        {
-            //MessageBox.Show("Test");
-        }
+        
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
-
+            
 
             var stringSeparators = new string[] { "{", "}" };
             var test1 = e.MessageString.Split(stringSeparators, StringSplitOptions.None);

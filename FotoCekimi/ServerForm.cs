@@ -31,11 +31,7 @@ namespace FotoCekimi
 {
     public partial class ServerForm : Form
     {
-        private DatabaseContext _context;
-        private ITCPListener TCPListenerServer;
-        private ICameraService _cameraService;
-        
-      
+        private SimpleTCPServerListener TCPListenerServer;
 
         public ServerForm()
         {
@@ -44,9 +40,20 @@ namespace FotoCekimi
             INIReadWrite.readWriteIniFile();
             TCPListenerServer = new SimpleTCPServerListener();
            
+            TCPListenerServer.ClientConnected += ServerForm_ClientConnected;
+            TCPListenerServer.DataReceived += ServerForm_DataReceived;
         }
 
-        
+        private void ServerForm_DataReceived(object sender, SimpleTCP.Message e)
+        {
+            MessageBox.Show("Test");
+        }
+
+        private void ServerForm_ClientConnected(object sender, TcpClient e)
+        {
+            MessageBox.Show("Test");
+        }
+
         private void btnGetir_Click(object sender, EventArgs e)
         {
             //Raporlama raporlama = new Raporlama();
@@ -56,4 +63,6 @@ namespace FotoCekimi
 
 
     }
+
+  
 }
