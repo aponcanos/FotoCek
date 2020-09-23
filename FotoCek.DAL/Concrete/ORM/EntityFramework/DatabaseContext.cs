@@ -2,7 +2,7 @@
 using FotoCek.Entities.DbClasses;
 using System.Data.Entity;
 
-namespace FotoCek.DAL
+namespace FotoCek.DAL.Concrete.EntityFramework
 {
     public class DatabaseContext : DbContext
     {

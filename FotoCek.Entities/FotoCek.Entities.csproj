@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ayarlar.cs" />
-    <Compile Include="DbClasses\Camera.cs" />
-    <Compile Include="DbClasses\Log.cs" />
-    <Compile Include="DbClasses\Logger.cs" />
-    <Compile Include="DbClasses\MotionEvent.cs" />
+    <Compile Include="Concrete\Ayarlar.cs" />
+    <Compile Include="Concrete\Camera.cs" />
+    <Compile Include="Concrete\Log.cs" />
+    <Compile Include="Concrete\Logger.cs" />
+    <Compile Include="Concrete\MotionEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

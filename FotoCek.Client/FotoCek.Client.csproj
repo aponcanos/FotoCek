@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Ini.Net, Version=1.0.5531.18665, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ini.net.1.1.0\lib\net20\Ini.Net.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleTCP, Version=1.0.24.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
     </Reference>
@@ -56,8 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\CheckAlarmStatusOnTCP.cs" />
-    <Compile Include="Classes\ClientNode.cs" />
     <Compile Include="ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +117,9 @@
       <Project>{0864cba1-cd44-4942-89a5-83159656bee5}</Project>
       <Name>FotoCek.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DAL.csproj">
+    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DataAccess.csproj">
       <Project>{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}</Project>
-      <Name>FotoCek.DAL</Name>
+      <Name>FotoCek.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\FotoCek.Entities\FotoCek.Entities.csproj">
       <Project>{dfb23916-2018-43b2-873e-3604899b1a01}</Project>
@@ -130,6 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,6 +2,7 @@
 using FotoCek.Entities.DbClasses;
 using System;
 using System.IO;
+using FotoCek.DAL.Concrete.EntityFramework;
 
 namespace FotoCek.Business.Classes.Logging
 {

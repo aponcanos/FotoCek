@@ -75,6 +75,10 @@
       <HintPath>..\packages\ini.net.1.1.0\lib\net20\Ini.Net.dll</HintPath>
     </Reference>
     <Reference Include="INIFileParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleTCP, Version=1.0.24.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration.Install" />
@@ -163,14 +167,18 @@
       <Project>{0864CBA1-CD44-4942-89A5-83159656BEE5}</Project>
       <Name>FotoCek.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DAL.csproj">
+    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DataAccess.csproj">
       <Project>{49A57EFF-53CF-40E9-9A66-7E5DD91EBE55}</Project>
-      <Name>FotoCek.DAL</Name>
+      <Name>FotoCek.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\FotoCek.Entities\FotoCek.Entities.csproj">
       <Project>{dfb23916-2018-43b2-873e-3604899b1a01}</Project>
       <Name>FotoCek.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

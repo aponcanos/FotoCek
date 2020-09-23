@@ -90,6 +90,7 @@
             this.imgConnectionStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgConnectionStatus.TabIndex = 23;
             this.imgConnectionStatus.TabStop = false;
+            this.imgConnectionStatus.Click += new System.EventHandler(this.imgConnectionStatus_Click);
             this.imgConnectionStatus.DoubleClick += new System.EventHandler(this.imgConnectionStatus_DoubleClick);
             // 
             // lblTarih

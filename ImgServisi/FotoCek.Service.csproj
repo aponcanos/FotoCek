@@ -103,9 +103,9 @@
       <Project>{0864cba1-cd44-4942-89a5-83159656bee5}</Project>
       <Name>FotoCek.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DAL.csproj">
+    <ProjectReference Include="..\FotoCek.DAL\FotoCek.DataAccess.csproj">
       <Project>{49a57eff-53cf-40e9-9a66-7e5dd91ebe55}</Project>
-      <Name>FotoCek.DAL</Name>
+      <Name>FotoCek.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\FotoCek.Entities\FotoCek.Entities.csproj">
       <Project>{dfb23916-2018-43b2-873e-3604899b1a01}</Project>

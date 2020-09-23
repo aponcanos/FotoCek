@@ -8,7 +8,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using FotoCek.Business.Classes.INI;
 using SimpleTCP;
+using Ini.Net;
 
 namespace FotoCek.Client
 {
@@ -17,9 +19,12 @@ namespace FotoCek.Client
         SimpleTcpClient client;
         public Form1()
         {
+            //INIReadWrite.readWriteIniFile();
+            Thread.Sleep(10000);
             InitializeComponent();
-            Control.CheckForIllegalCrossThreadCalls = false;
-            
+
+            client = new SimpleTcpClient().Connect(Ayarlar.ServerIP.ToString(), Ayarlar.ServerPort);
+            client.DataReceived += Client_DataReceived;
 
             imgConnectionStatus.Parent = panel1;
             imgConnectionStatus.BackColor = Color.Transparent;
@@ -40,7 +45,7 @@ namespace FotoCek.Client
 
         private void imgConnectionStatus_DoubleClick(object sender, EventArgs e)
         {
-            client = new SimpleTcpClient().Connect("127.0.0.1", 3380);
+            client = new SimpleTcpClient().Connect(Ayarlar.ServerIP.ToString(), Ayarlar.ServerPort);
             client.DataReceived += Client_DataReceived;
         }
 
@@ -57,6 +62,10 @@ namespace FotoCek.Client
             return returnImage;
         }
 
+        private void imgConnectionStatus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     

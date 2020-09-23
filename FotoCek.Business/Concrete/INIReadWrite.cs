@@ -23,7 +23,7 @@ namespace FotoCek.Business.Classes.INI
             var DBUserName = iniFile.ReadString("SQLServerConfiguration", "DBUserName");
             var DBPassword = iniFile.ReadString("SQLServerConfiguration", "DBPassword");
 
-            Ayarlar.ServerIP = IPAddress.Parse(SQLServerIP);
+            Ayarlar.SQLServerIP = IPAddress.Parse(SQLServerIP);
             Ayarlar.SQLInstanceName =
                 $"Data Source={SQLServerName};Initial Catalog={DBName} ; Integrated Security=false; User ID={DBUserName} ; Password={DBPassword}";
 
@@ -36,7 +36,10 @@ namespace FotoCek.Business.Classes.INI
             Ayarlar.CamHTTPPort = cameraHttpPort;
 
             var serverPort = Convert.ToInt32(iniFile.ReadString("ServerConfiguration", "ServerPort"));
+            var serverIP = IPAddress.Parse(iniFile.ReadString("ServerConfiguration", "ServerIP"));
+
             Ayarlar.ServerPort = serverPort;
+            Ayarlar.ServerIP = serverIP;
         }
     }
 }

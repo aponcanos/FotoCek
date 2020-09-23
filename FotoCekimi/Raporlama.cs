@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FotoCek.DAL.Concrete.EntityFramework;
 
 namespace FotoCekimi
 {

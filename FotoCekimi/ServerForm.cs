@@ -19,7 +19,13 @@ using System.Windows.Forms;
 using FotoCek.Business.Abstract;
 using FotoCek.Business.Classes.INI;
 using FotoCek.Business.Concrete;
+using FotoCek.Business.DependencyResolver;
+using FotoCek.DAL.Concrete;
+using FotoCek.DAL.Concrete.EntityFramework;
 using Ini.Net;
+using Ninject;
+using SimpleTCP;
+
 
 namespace FotoCekimi
 {
@@ -27,46 +33,27 @@ namespace FotoCekimi
     {
         private DatabaseContext _context;
         private ITCPListener TCPListenerServer;
+        private ICameraService _cameraService;
+        
+      
 
         public ServerForm()
         {
             InitializeComponent();
-            Control.CheckForIllegalCrossThreadCalls = false;
 
             INIReadWrite.readWriteIniFile();
             TCPListenerServer = new SimpleTCPServerListener();
-
-            _context = new DatabaseContext();
+           
         }
 
+        
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            Raporlama raporlama = new Raporlama();
-            raporlama.Show();
+            //Raporlama raporlama = new Raporlama();
+            //raporlama.Show();
+
         }
 
-
-
-        private void tmrSaat_Tick(object sender, EventArgs e)
-        {
-            lblTarih.Text = DateTime.Now.ToLongTimeString();
-
-            int saat = DateTime.Now.Hour;
-            int dakika = DateTime.Now.Minute;
-            int saniye = DateTime.Now.Second;
-
-            int count = (saat * 3600) + (dakika * 60) + saniye;
-
-            int geriSayim = 86400 - count;
-
-            if (geriSayim == 1)
-            {
-                lbClients.Items.Clear();
-            }
-
-
-            label1.Text = geriSayim.ToString();
-        }
 
     }
 }

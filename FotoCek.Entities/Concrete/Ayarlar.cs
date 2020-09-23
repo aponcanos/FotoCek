@@ -11,9 +11,10 @@ namespace FotoCek.Entities
     {
         //GENET
         static public string SQLInstanceName = null;
-        static public IPAddress ServerIP = IPAddress.Any;
-        
+        static public IPAddress SQLServerIP = IPAddress.Parse("127.0.0.1");
 
+
+        static  public IPAddress ServerIP =IPAddress.Parse("127.0.0.1");
         static public int ServerPort = 29999;
 
         public static string CamUserName = "admin";
