@@ -1,6 +1,7 @@
 ﻿using FotoCek.Entities;
 using FotoCek.Entities.DbClasses;
 using System.Data.Entity;
+using FotoCek.Entities.Concrete;
 
 namespace FotoCek.DAL.Concrete.EntityFramework
 {
@@ -14,6 +15,7 @@ namespace FotoCek.DAL.Concrete.EntityFramework
         public DbSet<Camera> Cameras { get; set; }
         public DbSet<MotionEvent> MotionEvents { get; set; }
         public DbSet<Log> Logs { get; set; }
+        public DbSet<Turnstile> Turnstiles { get; set; }
 
     }
 
@@ -22,6 +24,8 @@ namespace FotoCek.DAL.Concrete.EntityFramework
         protected override void Seed(DatabaseContext context)
         {
             base.Seed(context);
+
+
         }
     }
 

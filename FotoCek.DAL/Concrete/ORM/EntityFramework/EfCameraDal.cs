@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using FotoCek.DAL.Abstract;
@@ -19,13 +21,32 @@ namespace FotoCek.DAL.Concrete
             }
         }
 
-        public void AddCamera(Camera camera)
+        public int AddCamera(Camera camera)
         {
             using (DatabaseContext context =new DatabaseContext())
             {
                 context.Cameras.Add(camera);
-                context.SaveChanges();
+                return context.SaveChanges();
             }
         }
+
+        public int RemoveCamera(Camera camera)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                context.Entry(camera).State = EntityState.Deleted;
+                context.Cameras.Remove(camera);
+                return context.SaveChanges();
+            }
+        }
+
+        public Camera GetCamera(string cameraIpAddress)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                return context.Cameras.Where(x => x.IP == cameraIpAddress).FirstOrDefault();
+            }
+        }
+
     }
 }

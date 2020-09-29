@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.UI", "FotoCekimi\FotoCek.UI.csproj", "{B33C3600-B7C8-4C00-A370-9D1884AE7711}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.Server", "FotoCekimi\FotoCek.Server.csproj", "{B33C3600-B7C8-4C00-A370-9D1884AE7711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FotoCek.Service", "ImgServisi\FotoCek.Service.csproj", "{71AE922E-D38F-41DF-A51A-0DE09E6981F0}"
 EndProject

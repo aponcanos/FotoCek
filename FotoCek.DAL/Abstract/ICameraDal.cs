@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using FotoCek.Entities.DbClasses;
@@ -10,6 +11,8 @@ namespace FotoCek.DAL.Abstract
     public interface ICameraDal
     {
         List<Camera> GetCameras();
-        void AddCamera(Camera camera);
+        int AddCamera(Camera camera);
+        int RemoveCamera(Camera camera);
+        Camera GetCamera(string cameraIpAddress);
     }
 }

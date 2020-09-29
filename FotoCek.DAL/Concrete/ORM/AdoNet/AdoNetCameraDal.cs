@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using FotoCek.DAL.Abstract;
@@ -16,13 +17,29 @@ namespace FotoCek.DAL.Concrete.AdoNet
             throw new NotImplementedException();
         }
 
-        public void AddCamera(Camera camera)
+        public int AddCamera(Camera camera)
         {
             using (DatabaseContext context=new DatabaseContext())
             {
                 context.Cameras.Add(camera);
-                context.SaveChanges();
+                return context.SaveChanges();
             }
+        }
+
+        public int RemoveCamera(Camera camera)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                context.Cameras.Remove(camera);
+                return context.SaveChanges();
+            }
+        }
+
+      
+
+        public Camera GetCamera(string cameraIpAddress)
+        {
+            throw new NotImplementedException();
         }
     }
 }

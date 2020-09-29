@@ -20,5 +20,6 @@ namespace FotoCek.Entities
         public static string CamUserName = "admin";
         public static string CamPassword = "admin";
         public static int CamHTTPPort= 80;
+        public static string imgUrl = null;
     }
 }

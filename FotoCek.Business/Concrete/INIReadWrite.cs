@@ -1,42 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using FotoCek.Entities;
-using Ini.Net;
+using IniParser;
+using IniParser.Model;
 
 
-namespace FotoCek.Business.Classes.INI
+namespace FotoCek.Business.Concrete
 {
     public static class INIReadWrite
     {
         public static void readWriteIniFile()
         {
-            var iniFile = new IniFile("Configuration.ini");
 
-            var SQLServerName = iniFile.ReadString("SQLServerConfiguration", "SQLServerName");
-            var SQLServerIP = iniFile.ReadString("SQLServerConfiguration", "SQLServerIP");
-            
-            var DBName = iniFile.ReadString("SQLServerConfiguration", "DBName");
-            var DBUserName = iniFile.ReadString("SQLServerConfiguration", "DBUserName");
-            var DBPassword = iniFile.ReadString("SQLServerConfiguration", "DBPassword");
+            var parser = new FileIniDataParser();
+            IniData data = parser.ReadFile("Configuration.ini");
+
+
+            var SQLServerName = data["SQLServerConfiguration"]["SQLServerName"];
+            var SQLServerIP = data["SQLServerConfiguration"]["SQLServerIP"];
+
+            var DBName = data["SQLServerConfiguration"]["DBName"];
+            var DBUserName = data["SQLServerConfiguration"]["DBUserName"];
+            var DBPassword = data["SQLServerConfiguration"]["DBPassword"];
 
             Ayarlar.SQLServerIP = IPAddress.Parse(SQLServerIP);
             Ayarlar.SQLInstanceName =
                 $"Data Source={SQLServerName};Initial Catalog={DBName} ; Integrated Security=false; User ID={DBUserName} ; Password={DBPassword}";
 
-            var cameraUserName = iniFile.ReadString("CameraConfiguration", "CameraUserName");
-            var cameraPassword = iniFile.ReadString("CameraConfiguration", "CameraPassword");
-            var cameraHttpPort = Convert.ToInt32(iniFile.ReadString("CameraConfiguration", "CameraHTTPPort"));
+
+            var cameraUserName = data["CameraConfiguration"]["CameraUserName"];
+            var cameraPassword = data["CameraConfiguration"]["CameraPassword"];
+            var cameraHttpPort = Convert.ToInt32(data["CameraConfiguration"]["CameraHTTPPort"]);
+            var cameraImageUrl = data["CameraConfiguration"]["imgUrl"];
+
 
             Ayarlar.CamUserName = cameraUserName;
             Ayarlar.CamPassword = cameraPassword;
             Ayarlar.CamHTTPPort = cameraHttpPort;
+            Ayarlar.imgUrl = cameraImageUrl;
 
-            var serverPort = Convert.ToInt32(iniFile.ReadString("ServerConfiguration", "ServerPort"));
-            var serverIP = IPAddress.Parse(iniFile.ReadString("ServerConfiguration", "ServerIP"));
+            var serverPort = Convert.ToInt32(data["ServerConfiguration"]["ServerPort"]);
+            var serverIP = IPAddress.Parse(data["ServerConfiguration"]["ServerIP"]);
 
             Ayarlar.ServerPort = serverPort;
             Ayarlar.ServerIP = serverIP;

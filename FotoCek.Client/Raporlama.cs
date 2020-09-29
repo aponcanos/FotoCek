@@ -14,25 +14,33 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FotoCek.Business.DependencyResolver;
+using FotoCek.DAL.Abstract;
 using FotoCek.DAL.Concrete.EntityFramework;
+using Ninject;
 
 namespace FotoCek.Client
 {
     public partial class Raporlama : Form
     {
-        DatabaseContext _databaseContext;
+        private IMotionEventDal _motionEventManager;
+        private IKernel _kernel;
 
-        public Raporlama(TcpClient tcpClient)
+        DatabaseContext _databaseContext;
+        
+
+        public Raporlama()
         {
             InitializeComponent();
-
-            _databaseContext = new DatabaseContext();
+            _kernel=new StandardKernel(new BusinessModule());
+            _motionEventManager = _kernel.Get<EfMotionEventDal>();
         }
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            var bulunanSonuclar = _databaseContext.MotionEvents.Where(x => x.GirisTarihi > dtBaslangicZamani.Value && x.GirisTarihi < dtBitisZamani.Value).ToList();
-            grdRapor.DataSource = bulunanSonuclar;
+          var MotionEventList =  _motionEventManager.GetMotionEvents().Where(x => x.GirisTarihi > dtBaslangicZamani.Value && x.GirisTarihi < dtBitisZamani.Value).ToList();
+           
+            grdRapor.DataSource = MotionEventList;
 
             lblToplam.Text = grdRapor.Rows.Count.ToString();
         }

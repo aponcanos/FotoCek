@@ -16,7 +16,7 @@ namespace FotoCek.Business.DependencyResolver
             Bind<ICameraService>().To<CameraManager>().InSingletonScope();
             Bind<IMotionEventService>().To<MotionEventManager>().InSingletonScope();
             Bind<ITakeSnapshotService>().To<TakeSnapshotManager>().InSingletonScope();
-
+            Bind<ITurnstileService>().To<TurnstileManager>().InSingletonScope();
         }
     }
 }

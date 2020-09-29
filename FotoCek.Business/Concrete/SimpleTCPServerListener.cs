@@ -51,14 +51,12 @@ namespace FotoCek.Business.Abstract
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
-            
-
             var stringSeparators = new string[] { "{", "}" };
             var test1 = e.MessageString.Split(stringSeparators, StringSplitOptions.None);
 
             var connectedDevice = ((IPEndPoint)e.TcpClient.Client.RemoteEndPoint).Address.ToString();
 
-            var ConnectedCamera = _allCameras.Where(x => x.IP == connectedDevice.ToString()).FirstOrDefault();
+            var ConnectedCamera = _allCameras.Where(x => x.IP == connectedDevice).FirstOrDefault();
 
             if (ConnectedCamera != null)
             {
@@ -72,6 +70,7 @@ namespace FotoCek.Business.Abstract
                     DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss"),
                     TurnikeID = ConnectedCamera.TurnikeID
                 });
+                
 
                 TCPListenerServer.Broadcast(data);
             }

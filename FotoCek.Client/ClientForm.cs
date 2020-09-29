@@ -1,40 +1,66 @@
 ﻿using FotoCek.Entities;
+using SimpleTCP;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
+using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
-using FotoCek.Business.Classes.INI;
-using SimpleTCP;
-using Ini.Net;
+using FotoCek.Business.Concrete;
+using FotoCek.Client.Properties;
+using FotoCek.DAL.Abstract;
+using FotoCek.Entities.DbClasses;
 
 namespace FotoCek.Client
 {
     public partial class Form1 : Form
     {
+        private List<Camera> _allCameras;
         SimpleTcpClient client;
+        private ICameraDal _cameraManager;
+
         public Form1()
         {
-            //INIReadWrite.readWriteIniFile();
-            Thread.Sleep(10000);
+            INIReadWrite.readWriteIniFile();
+            Thread.Sleep(2000);
             InitializeComponent();
 
-            client = new SimpleTcpClient().Connect(Ayarlar.ServerIP.ToString(), Ayarlar.ServerPort);
-            client.DataReceived += Client_DataReceived;
+            connectToServer();
 
             imgConnectionStatus.Parent = panel1;
             imgConnectionStatus.BackColor = Color.Transparent;
-
         }
 
+
+        private void connectToServer()
+        {
+            //INIReadWrite.readWriteIniFile();
+            try
+            {
+                if ((client==null) || (!client.TcpClient.Connected))
+                {
+                    client = new SimpleTcpClient().Connect(Ayarlar.ServerIP.ToString(), Ayarlar.ServerPort);
+                    client.DataReceived += Client_DataReceived;
+
+                    imgConnectionStatus.Image = Resources.green1;
+                }
+               
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Sunucuya bağlanamadı !", "Bağlantı Hatası", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                imgConnectionStatus.Image = Resources.red1;
+            }
+
+           
+
+        }
         private void btnRaporlama_Click(object sender, EventArgs e)
         {
-            //Raporlama raporlama = new Raporlama();
-            //raporlama.Show();
+            Raporlama raporlama = new Raporlama();
+            raporlama.Show();
         }
 
         private void tmrSaat_Tick(object sender, EventArgs e)
@@ -45,8 +71,8 @@ namespace FotoCek.Client
 
         private void imgConnectionStatus_DoubleClick(object sender, EventArgs e)
         {
-            client = new SimpleTcpClient().Connect(Ayarlar.ServerIP.ToString(), Ayarlar.ServerPort);
-            client.DataReceived += Client_DataReceived;
+            connectToServer();
+
         }
 
         private void Client_DataReceived(object sender, SimpleTCP.Message e)
@@ -68,5 +94,5 @@ namespace FotoCek.Client
         }
     }
 
-    
+
 }

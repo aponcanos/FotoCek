@@ -5,11 +5,12 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using FotoCek.Business.Abstract;
+using FotoCek.Entities;
 using FotoCek.Entities.DbClasses;
 
 namespace FotoCek.Business.Concrete
 {
-    public class TakeSnapshotManager:ITakeSnapshotService
+    public class TakeSnapshotManager : ITakeSnapshotService
     {
         string IP { get; set; }
         int HTTPPort { get; set; }
@@ -30,7 +31,11 @@ namespace FotoCek.Business.Concrete
 
             using (WebClient client = new WebClient())
             {
-                data = client.DownloadData($"http://{camera.IP}:{camera.HTTPPort}/cgi-bin/image.cgi?userName={camera.UserName}&password={camera.Password}&cameraID=1&quality=5");
+
+               var imgUrl = Ayarlar.imgUrl.Replace("{IP}", camera.IP.ToString()).Replace("{HTTPPort}", camera.HTTPPort.ToString())
+                    .Replace("{UserName}", camera.UserName).Replace("{Password}", camera.Password);
+
+                data = client.DownloadData(imgUrl);
             }
 
             return data;

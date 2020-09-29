@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServerForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbClients = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTarih = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnGetir = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSetting = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGetir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -56,6 +58,7 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
             this.panel2.Size = new System.Drawing.Size(630, 423);
             this.panel2.TabIndex = 51;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // tableLayoutPanel1
             // 
@@ -75,16 +78,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(620, 413);
             this.tableLayoutPanel1.TabIndex = 55;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(428, 373);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 54;
-            this.pictureBox1.TabStop = false;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label1
             // 
@@ -94,6 +88,7 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 53;
             this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbClients
             // 
@@ -102,6 +97,7 @@
             this.lbClients.Name = "lbClients";
             this.lbClients.Size = new System.Drawing.Size(177, 329);
             this.lbClients.TabIndex = 51;
+            this.lbClients.SelectedIndexChanged += new System.EventHandler(this.lbClients_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -111,18 +107,20 @@
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 52;
             this.label3.Text = "Clients:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.btnSetting);
             this.panel1.Controls.Add(this.lblTarih);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.btnGetir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(630, 74);
             this.panel1.TabIndex = 50;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTarih
             // 
@@ -134,6 +132,7 @@
             this.lblTarih.Size = new System.Drawing.Size(45, 19);
             this.lblTarih.TabIndex = 22;
             this.lblTarih.Text = "Tarih";
+            this.lblTarih.Click += new System.EventHandler(this.lblTarih_Click);
             // 
             // label5
             // 
@@ -145,18 +144,36 @@
             this.label5.Size = new System.Drawing.Size(159, 19);
             this.label5.TabIndex = 21;
             this.label5.Text = "Toscelik Turnike Giriş";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // btnGetir
+            // pictureBox1
             // 
-            this.btnGetir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetir.Image = global::FotoCekimi.Properties.Resources.btnKayitlar;
-            this.btnGetir.Location = new System.Drawing.Point(496, 17);
-            this.btnGetir.Name = "btnGetir";
-            this.btnGetir.Size = new System.Drawing.Size(122, 42);
-            this.btnGetir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnGetir.TabIndex = 16;
-            this.btnGetir.TabStop = false;
-            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(428, 373);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.Image = global::FotoCekimi.Properties.Resources.btnAyarlar;
+            this.btnSetting.Location = new System.Drawing.Point(496, 17);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(122, 42);
+            this.btnSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnSetting.TabIndex = 23;
+            this.btnSetting.TabStop = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ServerForm
             // 
@@ -172,17 +189,16 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGetir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox btnGetir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTarih;
@@ -191,6 +207,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox btnSetting;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -1,30 +1,8 @@
-﻿using FotoCek.Business;
-using FotoCek.DAL;
-using FotoCek.Entities;
-using FotoCek.Entities.DbClasses;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FotoCek.Business.Abstract;
-using FotoCek.Business.Classes.INI;
+﻿using FotoCek.Business.Abstract;
 using FotoCek.Business.Concrete;
-using FotoCek.Business.DependencyResolver;
-using FotoCek.DAL.Concrete;
-using FotoCek.DAL.Concrete.EntityFramework;
-using Ini.Net;
-using Ninject;
-using SimpleTCP;
+using System;
+using System.Net.Sockets;
+using System.Windows.Forms;
 
 
 namespace FotoCekimi
@@ -36,8 +14,9 @@ namespace FotoCekimi
         public ServerForm()
         {
             InitializeComponent();
-
+            
             INIReadWrite.readWriteIniFile();
+
             TCPListenerServer = new SimpleTCPServerListener();
            
             TCPListenerServer.ClientConnected += ServerForm_ClientConnected;
@@ -56,12 +35,65 @@ namespace FotoCekimi
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            //Raporlama raporlama = new Raporlama();
-            //raporlama.Show();
+            
 
         }
 
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            SettingForm settingForm=new SettingForm();
+            settingForm.Show();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbClients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTarih_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTarih.Text = DateTime.Now.ToString();
+        }
     }
 
   

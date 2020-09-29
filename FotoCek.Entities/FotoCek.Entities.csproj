@@ -48,6 +48,7 @@
     <Compile Include="Concrete\Log.cs" />
     <Compile Include="Concrete\Logger.cs" />
     <Compile Include="Concrete\MotionEvent.cs" />
+    <Compile Include="Concrete\Turnstile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
