@@ -46,5 +46,29 @@ namespace FotoCek.DAL.Concrete.ORM.EntityFramework
                 return context.Turnstiles.Where(x => x.Name == TurnstileName).FirstOrDefault(); ;
             }
         }
+
+        public int GetTurnstileId(string TurnstileName)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                return context.Turnstiles.Where(x => x.Name == TurnstileName).FirstOrDefault().Id; ;
+            }
+        }
+
+        public string GetTurnstileName(string turnstileName)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                return context.Turnstiles.Where(x => x.Name == turnstileName).FirstOrDefault().Name; ;
+            }
+        }
+
+        public string GetTurnstileName(int turnstileId)
+        {
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                return context.Turnstiles.Where(x => x.Id == turnstileId).FirstOrDefault().Name; ;
+            }
+        }
     }
 }

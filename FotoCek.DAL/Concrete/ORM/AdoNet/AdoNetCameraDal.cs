@@ -37,7 +37,7 @@ namespace FotoCek.DAL.Concrete.AdoNet
 
       
 
-        public Camera GetCamera(string cameraIpAddress)
+        public Camera GetCameraByIP(string cameraIpAddress)
         {
             throw new NotImplementedException();
         }

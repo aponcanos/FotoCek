@@ -23,7 +23,7 @@ namespace FotoCek.Client
         public Form1()
         {
             INIReadWrite.readWriteIniFile();
-            Thread.Sleep(2000);
+            Thread.Sleep(6000);
             InitializeComponent();
 
             connectToServer();
@@ -35,7 +35,7 @@ namespace FotoCek.Client
 
         private void connectToServer()
         {
-            //INIReadWrite.readWriteIniFile();
+            INIReadWrite.readWriteIniFile();
             try
             {
                 if ((client==null) || (!client.TcpClient.Connected))
@@ -47,9 +47,9 @@ namespace FotoCek.Client
                 }
                
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Sunucuya bağlanamadı !", "Bağlantı Hatası", MessageBoxButtons.OK,
+                MessageBox.Show(ex.Message, "Bağlantı Hatası", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 imgConnectionStatus.Image = Resources.red1;
             }

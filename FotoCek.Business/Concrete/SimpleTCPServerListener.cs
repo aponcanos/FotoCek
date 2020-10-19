@@ -12,6 +12,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.AccessControl;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using FotoCek.Business.DependencyResolver;
 using FotoCek.DAL.Abstract;
@@ -29,7 +30,7 @@ namespace FotoCek.Business.Abstract
         private ITakeSnapshotService _takeSnapshotService;
 
         private List<Camera> _allCameras;
-  
+
 
 
 
@@ -44,10 +45,10 @@ namespace FotoCek.Business.Abstract
 
             TCPListenerServer = new SimpleTcpServer().Start(Ayarlar.ServerPort);
             TCPListenerServer.DataReceived += Server_DataReceived;
-          
         }
 
-        
+
+
 
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
@@ -62,20 +63,35 @@ namespace FotoCek.Business.Abstract
             {
                 var eventDate = DateTime.Now;
 
-                byte[] data = _takeSnapshotService.TakeSnapshot(ConnectedCamera, eventDate);
-
-                _motionEventManager.AddMotionEvent(new MotionEvent()
+                try
                 {
-                    GirisTarihi = eventDate,
-                    DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss"),
-                    TurnikeID = ConnectedCamera.TurnikeID
-                });
-                
+                   
+                    _motionEventManager.AddMotionEvent(new MotionEvent()
+                    {
+                        GirisTarihi = eventDate,
+                        DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss"),
+                        TurnikeID = ConnectedCamera.TurnikeID
+                    });
 
-                TCPListenerServer.Broadcast(data);
+                    byte[] data = _takeSnapshotService.TakeSnapshot(ConnectedCamera, eventDate);
+
+
+                    TCPListenerServer.Broadcast(data);
+
+                    //var deviceRecordingPath = ConnectedCamera.RecordingPath;
+
+                    //var DeviceRecordingPath = (from x in _allCameras where x.IP.Equals(connectedDevice) select x.RecordingPath).FirstOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+
+
             }
 
-            var DeviceRecordingPath = (from x in _allCameras where x.IP.Equals(connectedDevice) select x.RecordingPath).FirstOrDefault();
+           
 
 
         }

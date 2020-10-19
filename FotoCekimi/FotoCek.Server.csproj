@@ -96,12 +96,6 @@
     <Reference Include="TelerikCommon, Version=2017.2.502.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Raporlama.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Raporlama.Designer.cs">
-      <DependentUpon>Raporlama.cs</DependentUpon>
-    </Compile>
     <Compile Include="ServerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,9 +111,6 @@
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Raporlama.resx">
-      <DependentUpon>Raporlama.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ServerForm.resx">
       <DependentUpon>ServerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,4 +185,9 @@
     <Folder Include="Concrete\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_StartDate="2000/1/1" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

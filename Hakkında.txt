@@ -1,4 +1,5 @@
-﻿1. Kamera CGI Alarm Service Center ekranı doldurulmalı 
-2. Kameranın çözünürlüğü değiştirilirse restart edilmeli 
+﻿1. Kamera CGI Alarm Service Center ekranı doldurulmalı. Buraya sunucu IP si set edilmeli 
+2. Kameranın çözünürlüğü değiştirilirse yazılım restart edilmeli 
 3. Full HD Çözünürlükte clienta resim gönderdim süresi ortalama 1sn, 12MP de 4 sn
+4. Client pcler için configuration dosyasına server bilgileri girilmeli
 

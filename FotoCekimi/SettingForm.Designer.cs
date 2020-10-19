@@ -29,29 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn21 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn22 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn23 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn24 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtFindRecordingPath = new Telerik.WinControls.UI.RadButton();
+            this.txtRTSPPort = new Telerik.WinControls.UI.RadTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.grdCameras = new Telerik.WinControls.UI.RadGridView();
+            this.btnDeleteCamera = new System.Windows.Forms.PictureBox();
             this.txtSnapshotCommand = new Telerik.WinControls.UI.RadTextBox();
             this.txtAlarmParameter = new Telerik.WinControls.UI.RadTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.drpTurnstile = new Telerik.WinControls.UI.RadDropDownList();
+            this.btnKameraKaydet = new System.Windows.Forms.PictureBox();
             this.txtLocation = new Telerik.WinControls.UI.RadTextBox();
             this.txtRecordingPath = new Telerik.WinControls.UI.RadTextBox();
             this.txtComment = new Telerik.WinControls.UI.RadTextBox();
@@ -72,27 +81,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnDeleteTurnstile = new System.Windows.Forms.PictureBox();
+            this.grdTurnstiles = new Telerik.WinControls.UI.RadGridView();
             this.txtTurnstileComment = new Telerik.WinControls.UI.RadTextBox();
             this.txtTurnstileName = new Telerik.WinControls.UI.RadTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnTurnikeKaydet = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTarih = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
-            this.grdTurnstiles = new Telerik.WinControls.UI.RadGridView();
-            this.btnDeleteCamera = new System.Windows.Forms.PictureBox();
-            this.btnKameraKaydet = new System.Windows.Forms.PictureBox();
-            this.btnTurnikeKaydet = new System.Windows.Forms.PictureBox();
-            this.btnDeleteTurnstile = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.grdCameras = new Telerik.WinControls.UI.RadGridView();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFindRecordingPath)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRTSPPort)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCameras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCameras.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSnapshotCommand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlarmParameter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drpTurnstile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnKameraKaydet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRecordingPath)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComment)).BeginInit();
@@ -103,17 +115,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileComment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileName)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteTurnstile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdTurnstiles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdTurnstiles.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteCamera)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnKameraKaydet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileComment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnikeKaydet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteTurnstile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCameras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCameras.MasterTemplate)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -141,6 +149,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txtFindRecordingPath);
+            this.tabPage1.Controls.Add(this.txtRTSPPort);
+            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.grdCameras);
             this.tabPage1.Controls.Add(this.btnDeleteCamera);
             this.tabPage1.Controls.Add(this.txtSnapshotCommand);
@@ -177,13 +188,167 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // txtFindRecordingPath
+            // 
+            this.txtFindRecordingPath.Location = new System.Drawing.Point(991, 40);
+            this.txtFindRecordingPath.Name = "txtFindRecordingPath";
+            this.txtFindRecordingPath.Size = new System.Drawing.Size(26, 26);
+            this.txtFindRecordingPath.TabIndex = 53;
+            this.txtFindRecordingPath.Text = "...";
+            this.txtFindRecordingPath.Click += new System.EventHandler(this.txtFindRecordingPath_Click);
+            // 
+            // txtRTSPPort
+            // 
+            this.txtRTSPPort.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtRTSPPort.Location = new System.Drawing.Point(203, 141);
+            this.txtRTSPPort.Name = "txtRTSPPort";
+            this.txtRTSPPort.Size = new System.Drawing.Size(228, 27);
+            this.txtRTSPPort.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(25, 144);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(93, 20);
+            this.label14.TabIndex = 52;
+            this.label14.Text = "RTSP Port";
+            // 
+            // grdCameras
+            // 
+            this.grdCameras.BackColor = System.Drawing.Color.Transparent;
+            this.grdCameras.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdCameras.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grdCameras.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.grdCameras.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.grdCameras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.grdCameras.Location = new System.Drawing.Point(3, 252);
+            // 
+            // 
+            // 
+            this.grdCameras.MasterTemplate.AllowAddNewRow = false;
+            this.grdCameras.MasterTemplate.AllowDeleteRow = false;
+            this.grdCameras.MasterTemplate.AllowDragToGroup = false;
+            this.grdCameras.MasterTemplate.AllowEditRow = false;
+            this.grdCameras.MasterTemplate.AutoGenerateColumns = false;
+            this.grdCameras.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "IP";
+            gridViewTextBoxColumn1.HeaderText = "IP Adresi";
+            gridViewTextBoxColumn1.Name = "IP";
+            gridViewTextBoxColumn1.Width = 81;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "HTTPPort";
+            gridViewTextBoxColumn2.HeaderText = "HTTP Portu";
+            gridViewTextBoxColumn2.Name = "HTTPPort";
+            gridViewTextBoxColumn2.Width = 81;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "TCPPort";
+            gridViewTextBoxColumn3.HeaderText = "TCP Portu";
+            gridViewTextBoxColumn3.Name = "TCPPort";
+            gridViewTextBoxColumn3.Width = 81;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "UserName";
+            gridViewTextBoxColumn4.HeaderText = "Kullanıcı Adı";
+            gridViewTextBoxColumn4.Name = "UserName";
+            gridViewTextBoxColumn4.Width = 81;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Password";
+            gridViewTextBoxColumn5.HeaderText = "Şifre";
+            gridViewTextBoxColumn5.Name = "Password";
+            gridViewTextBoxColumn5.Width = 81;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Comment";
+            gridViewTextBoxColumn6.HeaderText = "Açıklama";
+            gridViewTextBoxColumn6.Name = "Comment";
+            gridViewTextBoxColumn6.Width = 81;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "IsActive";
+            gridViewTextBoxColumn7.HeaderText = "Aktif mi";
+            gridViewTextBoxColumn7.Name = "IsActive";
+            gridViewTextBoxColumn7.Width = 81;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "RecordingPath";
+            gridViewTextBoxColumn8.HeaderText = "Kayıt Yolu";
+            gridViewTextBoxColumn8.Name = "RecordingPath";
+            gridViewTextBoxColumn8.Width = 81;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "CameraName";
+            gridViewTextBoxColumn9.HeaderText = "Kamera Adı";
+            gridViewTextBoxColumn9.Name = "CameraName";
+            gridViewTextBoxColumn9.Width = 81;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "Location";
+            gridViewTextBoxColumn10.HeaderText = "Lokasyon";
+            gridViewTextBoxColumn10.Name = "Location";
+            gridViewTextBoxColumn10.Width = 81;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "Name";
+            gridViewTextBoxColumn11.HeaderText = "Turnike Adı";
+            gridViewTextBoxColumn11.Name = "Name";
+            gridViewTextBoxColumn11.Width = 75;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
+            gridViewTextBoxColumn12.FieldName = "RTSPPort";
+            gridViewTextBoxColumn12.HeaderText = "RTSPPort";
+            gridViewTextBoxColumn12.Name = "RTSPPort";
+            gridViewTextBoxColumn12.Width = 72;
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.FieldName = "CameraAlarmParameter";
+            gridViewTextBoxColumn13.HeaderText = "Camera Alarm Parametresi";
+            gridViewTextBoxColumn13.Name = "CameraAlarmParameter";
+            gridViewTextBoxColumn13.Width = 81;
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.FieldName = "SnapshotCommand";
+            gridViewTextBoxColumn14.HeaderText = "Resim Çekme Komutu";
+            gridViewTextBoxColumn14.Name = "SnapshotCommand";
+            gridViewTextBoxColumn14.Width = 93;
+            this.grdCameras.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14});
+            this.grdCameras.MasterTemplate.EnableGrouping = false;
+            this.grdCameras.MasterTemplate.ShowFilteringRow = false;
+            this.grdCameras.MasterTemplate.ShowRowHeaderColumn = false;
+            this.grdCameras.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.grdCameras.Name = "grdCameras";
+            this.grdCameras.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.grdCameras.ShowGroupPanel = false;
+            this.grdCameras.Size = new System.Drawing.Size(1119, 211);
+            this.grdCameras.TabIndex = 51;
+            this.grdCameras.Text = "radGridView2";
+            // 
+            // btnDeleteCamera
+            // 
+            this.btnDeleteCamera.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCamera.Image = global::FotoCekimi.Properties.Resources.Sil;
+            this.btnDeleteCamera.Location = new System.Drawing.Point(767, 204);
+            this.btnDeleteCamera.Name = "btnDeleteCamera";
+            this.btnDeleteCamera.Size = new System.Drawing.Size(122, 42);
+            this.btnDeleteCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnDeleteCamera.TabIndex = 50;
+            this.btnDeleteCamera.TabStop = false;
+            this.btnDeleteCamera.Click += new System.EventHandler(this.btnDeleteCamera_Click);
+            // 
             // txtSnapshotCommand
             // 
             this.txtSnapshotCommand.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSnapshotCommand.Location = new System.Drawing.Point(767, 171);
             this.txtSnapshotCommand.Name = "txtSnapshotCommand";
             this.txtSnapshotCommand.Size = new System.Drawing.Size(250, 27);
-            this.txtSnapshotCommand.TabIndex = 28;
+            this.txtSnapshotCommand.TabIndex = 13;
             // 
             // txtAlarmParameter
             // 
@@ -191,7 +356,7 @@
             this.txtAlarmParameter.Location = new System.Drawing.Point(767, 138);
             this.txtAlarmParameter.Name = "txtAlarmParameter";
             this.txtAlarmParameter.Size = new System.Drawing.Size(250, 27);
-            this.txtAlarmParameter.TabIndex = 29;
+            this.txtAlarmParameter.TabIndex = 12;
             // 
             // label1
             // 
@@ -217,11 +382,25 @@
             // 
             // drpTurnstile
             // 
+            this.drpTurnstile.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.drpTurnstile.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.drpTurnstile.Location = new System.Drawing.Point(767, 105);
             this.drpTurnstile.Name = "drpTurnstile";
             this.drpTurnstile.Size = new System.Drawing.Size(250, 27);
-            this.drpTurnstile.TabIndex = 25;
+            this.drpTurnstile.TabIndex = 11;
+            this.drpTurnstile.Click += new System.EventHandler(this.drpTurnstile_Click);
+            // 
+            // btnKameraKaydet
+            // 
+            this.btnKameraKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKameraKaydet.Image = global::FotoCekimi.Properties.Resources.Kaydet;
+            this.btnKameraKaydet.Location = new System.Drawing.Point(895, 204);
+            this.btnKameraKaydet.Name = "btnKameraKaydet";
+            this.btnKameraKaydet.Size = new System.Drawing.Size(122, 42);
+            this.btnKameraKaydet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnKameraKaydet.TabIndex = 23;
+            this.btnKameraKaydet.TabStop = false;
+            this.btnKameraKaydet.Click += new System.EventHandler(this.btnKameraKaydet_Click);
             // 
             // txtLocation
             // 
@@ -229,15 +408,15 @@
             this.txtLocation.Location = new System.Drawing.Point(767, 72);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Size = new System.Drawing.Size(250, 27);
-            this.txtLocation.TabIndex = 15;
+            this.txtLocation.TabIndex = 10;
             // 
             // txtRecordingPath
             // 
             this.txtRecordingPath.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtRecordingPath.Location = new System.Drawing.Point(767, 39);
             this.txtRecordingPath.Name = "txtRecordingPath";
-            this.txtRecordingPath.Size = new System.Drawing.Size(250, 27);
-            this.txtRecordingPath.TabIndex = 15;
+            this.txtRecordingPath.Size = new System.Drawing.Size(220, 27);
+            this.txtRecordingPath.TabIndex = 9;
             // 
             // txtComment
             // 
@@ -245,23 +424,23 @@
             this.txtComment.Location = new System.Drawing.Point(767, 6);
             this.txtComment.Name = "txtComment";
             this.txtComment.Size = new System.Drawing.Size(250, 27);
-            this.txtComment.TabIndex = 15;
+            this.txtComment.TabIndex = 8;
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtPassword.Location = new System.Drawing.Point(202, 174);
+            this.txtPassword.Location = new System.Drawing.Point(202, 207);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(228, 27);
-            this.txtPassword.TabIndex = 15;
+            this.txtPassword.TabIndex = 7;
             // 
             // txtUserName
             // 
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtUserName.Location = new System.Drawing.Point(202, 141);
+            this.txtUserName.Location = new System.Drawing.Point(202, 174);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(228, 27);
-            this.txtUserName.TabIndex = 15;
+            this.txtUserName.TabIndex = 6;
             // 
             // txtTCPPort
             // 
@@ -269,7 +448,7 @@
             this.txtTCPPort.Location = new System.Drawing.Point(202, 108);
             this.txtTCPPort.Name = "txtTCPPort";
             this.txtTCPPort.Size = new System.Drawing.Size(228, 27);
-            this.txtTCPPort.TabIndex = 15;
+            this.txtTCPPort.TabIndex = 4;
             // 
             // txtHTTPPort
             // 
@@ -277,7 +456,7 @@
             this.txtHTTPPort.Location = new System.Drawing.Point(202, 75);
             this.txtHTTPPort.Name = "txtHTTPPort";
             this.txtHTTPPort.Size = new System.Drawing.Size(228, 27);
-            this.txtHTTPPort.TabIndex = 15;
+            this.txtHTTPPort.TabIndex = 3;
             // 
             // txtIP
             // 
@@ -285,7 +464,7 @@
             this.txtIP.Location = new System.Drawing.Point(202, 42);
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(228, 27);
-            this.txtIP.TabIndex = 15;
+            this.txtIP.TabIndex = 2;
             // 
             // txtName
             // 
@@ -293,7 +472,7 @@
             this.txtName.Location = new System.Drawing.Point(202, 9);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(228, 27);
-            this.txtName.TabIndex = 14;
+            this.txtName.TabIndex = 1;
             // 
             // label13
             // 
@@ -302,9 +481,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(538, 108);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 20);
+            this.label13.Size = new System.Drawing.Size(99, 20);
             this.label13.TabIndex = 13;
-            this.label13.Text = "Turnike";
+            this.label13.Text = "Turnike Adı";
             // 
             // label12
             // 
@@ -313,9 +492,9 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(538, 75);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 20);
+            this.label12.Size = new System.Drawing.Size(159, 20);
             this.label12.TabIndex = 12;
-            this.label12.Text = "Lokasyon";
+            this.label12.Text = "Turnike Lokasyonu";
             // 
             // label11
             // 
@@ -355,7 +534,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(24, 177);
+            this.label8.Location = new System.Drawing.Point(24, 210);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 8;
@@ -366,7 +545,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(24, 144);
+            this.label7.Location = new System.Drawing.Point(24, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 7;
@@ -423,6 +602,59 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
+            // btnDeleteTurnstile
+            // 
+            this.btnDeleteTurnstile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteTurnstile.Image = global::FotoCekimi.Properties.Resources.Sil;
+            this.btnDeleteTurnstile.Location = new System.Drawing.Point(180, 158);
+            this.btnDeleteTurnstile.Name = "btnDeleteTurnstile";
+            this.btnDeleteTurnstile.Size = new System.Drawing.Size(122, 42);
+            this.btnDeleteTurnstile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnDeleteTurnstile.TabIndex = 51;
+            this.btnDeleteTurnstile.TabStop = false;
+            this.btnDeleteTurnstile.Click += new System.EventHandler(this.btnDeleteTurnstile_Click);
+            // 
+            // grdTurnstiles
+            // 
+            this.grdTurnstiles.BackColor = System.Drawing.Color.Transparent;
+            this.grdTurnstiles.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdTurnstiles.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grdTurnstiles.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.grdTurnstiles.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.grdTurnstiles.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.grdTurnstiles.Location = new System.Drawing.Point(3, 222);
+            // 
+            // 
+            // 
+            this.grdTurnstiles.MasterTemplate.AllowAddNewRow = false;
+            this.grdTurnstiles.MasterTemplate.AllowDeleteRow = false;
+            this.grdTurnstiles.MasterTemplate.AllowDragToGroup = false;
+            this.grdTurnstiles.MasterTemplate.AllowEditRow = false;
+            this.grdTurnstiles.MasterTemplate.AutoGenerateColumns = false;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.FieldName = "Name";
+            gridViewTextBoxColumn15.HeaderText = "Name";
+            gridViewTextBoxColumn15.Name = "Name";
+            gridViewTextBoxColumn15.Width = 230;
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.FieldName = "Comment";
+            gridViewTextBoxColumn16.HeaderText = "Comment";
+            gridViewTextBoxColumn16.Name = "Comment";
+            gridViewTextBoxColumn16.Width = 230;
+            this.grdTurnstiles.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16});
+            this.grdTurnstiles.MasterTemplate.EnableGrouping = false;
+            this.grdTurnstiles.MasterTemplate.ShowFilteringRow = false;
+            this.grdTurnstiles.MasterTemplate.ShowRowHeaderColumn = false;
+            this.grdTurnstiles.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.grdTurnstiles.Name = "grdTurnstiles";
+            this.grdTurnstiles.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.grdTurnstiles.ShowGroupPanel = false;
+            this.grdTurnstiles.Size = new System.Drawing.Size(1119, 241);
+            this.grdTurnstiles.TabIndex = 48;
+            this.grdTurnstiles.Text = "radGridView2";
+            // 
             // txtTurnstileComment
             // 
             this.txtTurnstileComment.AutoSize = false;
@@ -463,6 +695,18 @@
             this.label20.TabIndex = 24;
             this.label20.Text = "Açıklama";
             // 
+            // btnTurnikeKaydet
+            // 
+            this.btnTurnikeKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTurnikeKaydet.Image = global::FotoCekimi.Properties.Resources.Kaydet;
+            this.btnTurnikeKaydet.Location = new System.Drawing.Point(308, 158);
+            this.btnTurnikeKaydet.Name = "btnTurnikeKaydet";
+            this.btnTurnikeKaydet.Size = new System.Drawing.Size(122, 42);
+            this.btnTurnikeKaydet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnTurnikeKaydet.TabIndex = 45;
+            this.btnTurnikeKaydet.TabStop = false;
+            this.btnTurnikeKaydet.Click += new System.EventHandler(this.btnTurnikeKaydet_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
@@ -496,196 +740,11 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Toscelik Turnike Giriş";
             // 
-            // grdTurnstiles
-            // 
-            this.grdTurnstiles.BackColor = System.Drawing.Color.Transparent;
-            this.grdTurnstiles.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdTurnstiles.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grdTurnstiles.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.grdTurnstiles.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grdTurnstiles.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grdTurnstiles.Location = new System.Drawing.Point(3, 222);
-            // 
-            // 
-            // 
-            this.grdTurnstiles.MasterTemplate.AllowAddNewRow = false;
-            this.grdTurnstiles.MasterTemplate.AllowDeleteRow = false;
-            this.grdTurnstiles.MasterTemplate.AllowDragToGroup = false;
-            this.grdTurnstiles.MasterTemplate.AllowEditRow = false;
-            this.grdTurnstiles.MasterTemplate.AutoGenerateColumns = false;
-            gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "Name";
-            gridViewTextBoxColumn14.HeaderText = "Name";
-            gridViewTextBoxColumn14.Name = "Name";
-            gridViewTextBoxColumn14.Width = 230;
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "Comment";
-            gridViewTextBoxColumn15.HeaderText = "Comment";
-            gridViewTextBoxColumn15.Name = "Comment";
-            gridViewTextBoxColumn15.Width = 230;
-            this.grdTurnstiles.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15});
-            this.grdTurnstiles.MasterTemplate.EnableGrouping = false;
-            this.grdTurnstiles.MasterTemplate.ShowFilteringRow = false;
-            this.grdTurnstiles.MasterTemplate.ShowRowHeaderColumn = false;
-            this.grdTurnstiles.MasterTemplate.ViewDefinition = tableViewDefinition3;
-            this.grdTurnstiles.Name = "grdTurnstiles";
-            this.grdTurnstiles.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grdTurnstiles.ShowGroupPanel = false;
-            this.grdTurnstiles.Size = new System.Drawing.Size(1119, 241);
-            this.grdTurnstiles.TabIndex = 48;
-            this.grdTurnstiles.Text = "radGridView2";
-            // 
-            // btnDeleteCamera
-            // 
-            this.btnDeleteCamera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteCamera.Image = global::FotoCekimi.Properties.Resources.Sil;
-            this.btnDeleteCamera.Location = new System.Drawing.Point(767, 204);
-            this.btnDeleteCamera.Name = "btnDeleteCamera";
-            this.btnDeleteCamera.Size = new System.Drawing.Size(122, 42);
-            this.btnDeleteCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnDeleteCamera.TabIndex = 50;
-            this.btnDeleteCamera.TabStop = false;
-            this.btnDeleteCamera.Click += new System.EventHandler(this.btnDeleteCamera_Click);
-            // 
-            // btnKameraKaydet
-            // 
-            this.btnKameraKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKameraKaydet.Image = global::FotoCekimi.Properties.Resources.Kaydet;
-            this.btnKameraKaydet.Location = new System.Drawing.Point(895, 204);
-            this.btnKameraKaydet.Name = "btnKameraKaydet";
-            this.btnKameraKaydet.Size = new System.Drawing.Size(122, 42);
-            this.btnKameraKaydet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnKameraKaydet.TabIndex = 23;
-            this.btnKameraKaydet.TabStop = false;
-            this.btnKameraKaydet.Click += new System.EventHandler(this.btnKameraKaydet_Click);
-            // 
-            // btnTurnikeKaydet
-            // 
-            this.btnTurnikeKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTurnikeKaydet.Image = global::FotoCekimi.Properties.Resources.Kaydet;
-            this.btnTurnikeKaydet.Location = new System.Drawing.Point(308, 158);
-            this.btnTurnikeKaydet.Name = "btnTurnikeKaydet";
-            this.btnTurnikeKaydet.Size = new System.Drawing.Size(122, 42);
-            this.btnTurnikeKaydet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnTurnikeKaydet.TabIndex = 45;
-            this.btnTurnikeKaydet.TabStop = false;
-            this.btnTurnikeKaydet.Click += new System.EventHandler(this.btnTurnikeKaydet_Click);
-            // 
-            // btnDeleteTurnstile
-            // 
-            this.btnDeleteTurnstile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteTurnstile.Image = global::FotoCekimi.Properties.Resources.Sil;
-            this.btnDeleteTurnstile.Location = new System.Drawing.Point(180, 158);
-            this.btnDeleteTurnstile.Name = "btnDeleteTurnstile";
-            this.btnDeleteTurnstile.Size = new System.Drawing.Size(122, 42);
-            this.btnDeleteTurnstile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnDeleteTurnstile.TabIndex = 51;
-            this.btnDeleteTurnstile.TabStop = false;
-            this.btnDeleteTurnstile.Click += new System.EventHandler(this.btnDeleteTurnstile_Click);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // grdCameras
-            // 
-            this.grdCameras.BackColor = System.Drawing.Color.Transparent;
-            this.grdCameras.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdCameras.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grdCameras.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.grdCameras.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grdCameras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grdCameras.Location = new System.Drawing.Point(3, 252);
-            // 
-            // 
-            // 
-            this.grdCameras.MasterTemplate.AllowAddNewRow = false;
-            this.grdCameras.MasterTemplate.AllowDeleteRow = false;
-            this.grdCameras.MasterTemplate.AllowDragToGroup = false;
-            this.grdCameras.MasterTemplate.AllowEditRow = false;
-            this.grdCameras.MasterTemplate.AutoGenerateColumns = false;
-            this.grdCameras.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "IP";
-            gridViewTextBoxColumn16.HeaderText = "IP Adresi";
-            gridViewTextBoxColumn16.Name = "IP";
-            gridViewTextBoxColumn16.Width = 103;
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.FieldName = "HTTPPort";
-            gridViewTextBoxColumn17.HeaderText = "HTTP Portu";
-            gridViewTextBoxColumn17.Name = "HTTPPort";
-            gridViewTextBoxColumn17.Width = 103;
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "TCPPort";
-            gridViewTextBoxColumn18.HeaderText = "TCP Portu";
-            gridViewTextBoxColumn18.Name = "TCPPort";
-            gridViewTextBoxColumn18.Width = 103;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.FieldName = "UserName";
-            gridViewTextBoxColumn19.HeaderText = "Kullanıcı Adı";
-            gridViewTextBoxColumn19.Name = "UserName";
-            gridViewTextBoxColumn19.Width = 103;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.FieldName = "Password";
-            gridViewTextBoxColumn20.HeaderText = "Şifre";
-            gridViewTextBoxColumn20.Name = "Password";
-            gridViewTextBoxColumn20.Width = 103;
-            gridViewTextBoxColumn21.EnableExpressionEditor = false;
-            gridViewTextBoxColumn21.FieldName = "Comment";
-            gridViewTextBoxColumn21.HeaderText = "Açıklama";
-            gridViewTextBoxColumn21.Name = "Comment";
-            gridViewTextBoxColumn21.Width = 103;
-            gridViewTextBoxColumn22.EnableExpressionEditor = false;
-            gridViewTextBoxColumn22.FieldName = "IsActive";
-            gridViewTextBoxColumn22.HeaderText = "Aktif mi";
-            gridViewTextBoxColumn22.Name = "IsActive";
-            gridViewTextBoxColumn22.Width = 103;
-            gridViewTextBoxColumn23.EnableExpressionEditor = false;
-            gridViewTextBoxColumn23.FieldName = "RecordingPath";
-            gridViewTextBoxColumn23.HeaderText = "Kayıt Yolu";
-            gridViewTextBoxColumn23.Name = "RecordingPath";
-            gridViewTextBoxColumn23.Width = 103;
-            gridViewTextBoxColumn24.EnableExpressionEditor = false;
-            gridViewTextBoxColumn24.FieldName = "CameraName";
-            gridViewTextBoxColumn24.HeaderText = "Kamera Adı";
-            gridViewTextBoxColumn24.Name = "CameraName";
-            gridViewTextBoxColumn24.Width = 103;
-            gridViewTextBoxColumn25.EnableExpressionEditor = false;
-            gridViewTextBoxColumn25.FieldName = "Location";
-            gridViewTextBoxColumn25.HeaderText = "Lokasyon";
-            gridViewTextBoxColumn25.Name = "Location";
-            gridViewTextBoxColumn25.Width = 103;
-            gridViewTextBoxColumn26.EnableExpressionEditor = false;
-            gridViewTextBoxColumn26.FieldName = "TurnikeID";
-            gridViewTextBoxColumn26.HeaderText = "Turnike Id";
-            gridViewTextBoxColumn26.Name = "TurnikeID";
-            gridViewTextBoxColumn26.Width = 98;
-            this.grdCameras.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20,
-            gridViewTextBoxColumn21,
-            gridViewTextBoxColumn22,
-            gridViewTextBoxColumn23,
-            gridViewTextBoxColumn24,
-            gridViewTextBoxColumn25,
-            gridViewTextBoxColumn26});
-            this.grdCameras.MasterTemplate.EnableGrouping = false;
-            this.grdCameras.MasterTemplate.ShowFilteringRow = false;
-            this.grdCameras.MasterTemplate.ShowRowHeaderColumn = false;
-            this.grdCameras.MasterTemplate.ViewDefinition = tableViewDefinition4;
-            this.grdCameras.Name = "grdCameras";
-            this.grdCameras.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.grdCameras.ShowGroupPanel = false;
-            this.grdCameras.Size = new System.Drawing.Size(1119, 211);
-            this.grdCameras.TabIndex = 51;
-            this.grdCameras.Text = "radGridView2";
             // 
             // SettingForm
             // 
@@ -695,15 +754,21 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SettingForm";
-            this.Text = "SettingForm";
+            this.Text = "Ayarlar";
             this.Load += new System.EventHandler(this.SettingForm_Load);
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFindRecordingPath)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRTSPPort)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCameras.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCameras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSnapshotCommand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlarmParameter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drpTurnstile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnKameraKaydet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLocation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRecordingPath)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComment)).EndInit();
@@ -715,18 +780,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileComment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileName)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteTurnstile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdTurnstiles.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdTurnstiles)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteCamera)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnKameraKaydet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileComment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTurnstileName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTurnikeKaydet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteTurnstile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCameras.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdCameras)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -776,5 +837,8 @@
         private System.Windows.Forms.PictureBox btnDeleteTurnstile;
         private System.Windows.Forms.Timer timer1;
         private Telerik.WinControls.UI.RadGridView grdCameras;
+        private Telerik.WinControls.UI.RadTextBox txtRTSPPort;
+        private System.Windows.Forms.Label label14;
+        private Telerik.WinControls.UI.RadButton txtFindRecordingPath;
     }
 }

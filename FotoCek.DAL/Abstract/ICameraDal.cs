@@ -13,6 +13,6 @@ namespace FotoCek.DAL.Abstract
         List<Camera> GetCameras();
         int AddCamera(Camera camera);
         int RemoveCamera(Camera camera);
-        Camera GetCamera(string cameraIpAddress);
+        Camera GetCameraByIP(string cameraIpAddress);
     }
 }

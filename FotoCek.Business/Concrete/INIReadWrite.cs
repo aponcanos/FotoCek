@@ -13,7 +13,7 @@ namespace FotoCek.Business.Concrete
         {
 
             var parser = new FileIniDataParser();
-            IniData data = parser.ReadFile("Configuration.ini");
+            IniData data = parser.ReadFile(@"C:\Configuration.ini");
 
 
             var SQLServerName = data["SQLServerConfiguration"]["SQLServerName"];
@@ -27,17 +27,6 @@ namespace FotoCek.Business.Concrete
             Ayarlar.SQLInstanceName =
                 $"Data Source={SQLServerName};Initial Catalog={DBName} ; Integrated Security=false; User ID={DBUserName} ; Password={DBPassword}";
 
-
-            var cameraUserName = data["CameraConfiguration"]["CameraUserName"];
-            var cameraPassword = data["CameraConfiguration"]["CameraPassword"];
-            var cameraHttpPort = Convert.ToInt32(data["CameraConfiguration"]["CameraHTTPPort"]);
-            var cameraImageUrl = data["CameraConfiguration"]["imgUrl"];
-
-
-            Ayarlar.CamUserName = cameraUserName;
-            Ayarlar.CamPassword = cameraPassword;
-            Ayarlar.CamHTTPPort = cameraHttpPort;
-            Ayarlar.imgUrl = cameraImageUrl;
 
             var serverPort = Convert.ToInt32(data["ServerConfiguration"]["ServerPort"]);
             var serverIP = IPAddress.Parse(data["ServerConfiguration"]["ServerIP"]);

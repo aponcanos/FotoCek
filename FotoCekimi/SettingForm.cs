@@ -39,7 +39,7 @@ namespace FotoCekimi
         {
             var turnstile = _turnstileManager.GetTurnstiles().Where(x => x.Name == txtTurnstileName.Text).FirstOrDefault();
 
-            if (turnstile==null)
+            if (turnstile == null)
             {
                 var result = _turnstileManager.AddTurnstile(new Turnstile()
                 {
@@ -54,7 +54,7 @@ namespace FotoCekimi
             {
                 MessageBox.Show("Bu isimde başka bir turnike var. Lütfen farklı bir isim girin.", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-           
+
         }
 
         public void isRecorded(int result, TabPage tabPage)
@@ -79,35 +79,59 @@ namespace FotoCekimi
 
         private void btnKameraKaydet_Click(object sender, EventArgs e)
         {
-           var camera =  _cameraManager.GetCamera(txtIP.Text);
+            var turnstileId = _turnstileManager.GetTurnstileId(drpTurnstile.Text);
 
-           if (camera ==null)
-           {
-               var result = _cameraManager.AddCamera(new Camera()
-               {
-                   IP = txtIP.Text,
-                   HTTPPort = Convert.ToInt32(txtHTTPPort.Text),
-                   UserName = txtUserName.Text,
-                   Password = txtPassword.Text,
-                   TurnikeID = 1,
-                   Comment = txtComment.Text,
-                   IsActive = true,
-                   Location = txtLocation.Text,
-                   CameraName = txtName.Text,
-                   RecordingPath = txtRecordingPath.Text,
-                   CameraAlarmParameter = txtAlarmParameter.Text,
-                   SnapshotCommand = txtSnapshotCommand.Text,
-                   TCPPort = Convert.ToInt32(txtTCPPort.Text),
-               });
+            var camera = _cameraManager.GetCameraByIP(txtIP.Text);
 
-               grdCameras.DataSource = _cameraManager.GetCameras();
-               isRecorded(result, tabPage1);
+            if (camera == null)
+            {
+                var result = _cameraManager.AddCamera(new Camera()
+                {
+                    IP = txtIP.Text,
+                    HTTPPort = Convert.ToInt32(txtHTTPPort.Text),
+                    TCPPort = Convert.ToInt32(txtTCPPort.Text),
+                    UserName = txtUserName.Text,
+                    Password = txtPassword.Text,
+                    Comment = txtComment.Text,
+                    IsActive = true,
+                    RecordingPath = txtRecordingPath.Text,
+                    CameraName = txtName.Text,
+                    Location = txtLocation.Text,
+                    TurnikeID = turnstileId,
+                    RTSPPort = Convert.ToInt32(txtRTSPPort.Text),
+                    CameraAlarmParameter = txtAlarmParameter.Text,
+                    SnapshotCommand = txtSnapshotCommand.Text,
+
+                });
+
+                //grdCameras.DataSource = _cameraManager.GetCameras();
+
+
+                grdCameras.Rows.Add(
+                    txtIP.Text,
+                    Convert.ToInt32(txtHTTPPort.Text),
+                    Convert.ToInt32(txtTCPPort.Text),
+                    txtUserName.Text,
+                    txtPassword.Text,
+                    txtComment.Text,
+                    1,
+                    txtRecordingPath.Text,
+                    txtName.Text,
+                    txtLocation.Text,
+                    drpTurnstile.Text,
+                    554,
+                    txtAlarmParameter.Text,
+                    txtSnapshotCommand.Text
+                );
+
+
+                isRecorded(result, tabPage1);
             }
-           else
-           {
-               MessageBox.Show("Bu IP adresine sahip kamera zaten kayıtlı.", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                MessageBox.Show("Bu IP adresine sahip kamera zaten kayıtlı.", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
 
 
         }
@@ -142,7 +166,7 @@ namespace FotoCekimi
         private void btnDeleteCamera_Click(object sender, EventArgs e)
         {
             var cameraIP = grdCameras.Rows[grdCameras.CurrentRow.Index].Cells["IP"].Value.ToString();
-            Camera camera = _cameraManager.GetCamera(cameraIP);
+            Camera camera = _cameraManager.GetCameraByIP(cameraIP);
             _cameraManager.RemoveCamera(camera);
             grdCameras.DataSource = _cameraManager.GetCameras();
 
@@ -156,19 +180,36 @@ namespace FotoCekimi
 
             if (turnstile != null)
             {
-              var result =   _turnstileManager.RemoveTurnstile(turnstile);
+                var result = _turnstileManager.RemoveTurnstile(turnstile);
 
-              grdTurnstiles.DataSource = _turnstileManager.GetTurnstiles();
+                grdTurnstiles.DataSource = _turnstileManager.GetTurnstiles();
 
-              if (result==1)
-              {
-                  MessageBox.Show("Kayıt Silindi.", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (result == 1)
+                {
+                    MessageBox.Show("Kayıt Silindi.", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
 
             }
 
-            
+
+        }
+
+        private void drpTurnstile_Click(object sender, EventArgs e)
+        {
+            drpTurnstile.DataSource = _turnstileManager.GetTurnstiles();
+            drpTurnstile.ValueMember = "Name";
+            drpTurnstile.DisplayMember = "Name";
+        }
+
+        private void txtFindRecordingPath_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            DialogResult result = fbd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                txtRecordingPath.Text = fbd.SelectedPath;
+            }
         }
     }
 }

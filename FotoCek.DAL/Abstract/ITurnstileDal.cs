@@ -15,5 +15,7 @@ namespace FotoCek.DAL.Abstract
         int RemoveTurnstile(Turnstile turnstile);
 
         Turnstile GetTurnstile(string TurnstileName);
+        int GetTurnstileId(string TurnstileName);
+        string GetTurnstileName(int turnstileId);
     }
 }

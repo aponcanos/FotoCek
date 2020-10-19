@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -12,18 +15,6 @@ namespace FotoCek.Business.Concrete
 {
     public class TakeSnapshotManager : ITakeSnapshotService
     {
-        string IP { get; set; }
-        int HTTPPort { get; set; }
-        string UserName { get; set; }
-        string Password { get; set; }
-
-        public TakeSnapshotManager(Camera camera)
-        {
-            this.IP = camera.IP;
-            this.HTTPPort = camera.HTTPPort;
-            this.UserName = camera.UserName;
-            this.Password = camera.Password;
-        }
 
         public byte[] TakeSnapshot(Camera camera, DateTime eventDate)
         {
@@ -31,14 +22,29 @@ namespace FotoCek.Business.Concrete
 
             using (WebClient client = new WebClient())
             {
+                NetworkCredential nc = new NetworkCredential(camera.UserName,camera.Password);
+                client.Credentials = nc;
 
-               var imgUrl = Ayarlar.imgUrl.Replace("{IP}", camera.IP.ToString()).Replace("{HTTPPort}", camera.HTTPPort.ToString())
-                    .Replace("{UserName}", camera.UserName).Replace("{Password}", camera.Password);
+                data = client.DownloadData("http://"+ camera.IP + ":" + camera.HTTPPort + camera.SnapshotCommand);
 
-                data = client.DownloadData(imgUrl);
+                DirectoryInfo result =
+                    Directory.CreateDirectory(camera.RecordingPath + @"\" + camera.CameraName + @"\");
+
+
+                Image res = ByteArrayToImage(data);
+                res.Save(result.FullName + eventDate.ToString("yyyyMMddHHmmss") + ".jpg");
             }
 
             return data;
         }
+
+        public Image ByteArrayToImage(byte[] data)
+        {
+            MemoryStream bipimag = new MemoryStream(data);
+            Image imag = new Bitmap(bipimag);
+            return imag;
+        }
+
+
     }
 }

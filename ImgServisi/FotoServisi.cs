@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.ServiceProcess;
 using FotoCek.Business.Abstract;
+using FotoCek.Business.Concrete;
 
 namespace ImgServisi
 {
@@ -23,6 +24,8 @@ namespace ImgServisi
 
         protected override void OnStart(string[] args)
         {
+            INIReadWrite.readWriteIniFile();
+
             TCPListenerServer = new SimpleTCPServerListener();
         }
 

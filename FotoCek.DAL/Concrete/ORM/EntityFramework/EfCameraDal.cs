@@ -40,7 +40,7 @@ namespace FotoCek.DAL.Concrete
             }
         }
 
-        public Camera GetCamera(string cameraIpAddress)
+        public Camera GetCameraByIP(string cameraIpAddress)
         {
             using (DatabaseContext context = new DatabaseContext())
             {
