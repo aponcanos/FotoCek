@@ -49,45 +49,45 @@ namespace FotoCek.Client
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            if (drpTurnstile.Text=="")
+            if (drpTurnstile.Text == "")
             {
                 var tables = from camera in _cameraManager.GetCameras()
-                    join turnstile in _turnstileManager.GetTurnstiles() on camera.TurnikeID equals turnstile.Id
-                    join motionEvent in _motionEventManager.GetMotionEvents() on turnstile.Id equals motionEvent.TurnikeID
-                    where motionEvent.GirisTarihi > dtBaslangicZamani.Value && motionEvent.GirisTarihi < dtBitisZamani.Value
-                    select new
-                    {
-                        camera.RecordingPath,
-                        camera.CameraName,
-                        camera.Location,
-                        turnstile.Name,
-                        motionEvent.GirisTarihi,
-                        turnstile.Id
-                    };
+                             join turnstile in _turnstileManager.GetTurnstiles() on camera.TurnikeID equals turnstile.Id
+                             join motionEvent in _motionEventManager.GetMotionEvents() on turnstile.Id equals motionEvent.TurnikeID
+                             where motionEvent.GirisTarihi > dtBaslangicZamani.Value && motionEvent.GirisTarihi < dtBitisZamani.Value
+                             select new
+                             {
+                                 camera.RecordingPath,
+                                 camera.CameraName,
+                                 camera.Location,
+                                 turnstile.Name,
+                                 motionEvent.GirisTarihi,
+                                 turnstile.Id
+                             };
 
                 grdMotionEvents.DataSource = tables;
             }
             else
             {
                 var tables = from camera in _cameraManager.GetCameras()
-                    join turnstile in _turnstileManager.GetTurnstiles() on camera.TurnikeID equals turnstile.Id
-                    join motionEvent in _motionEventManager.GetMotionEvents() on turnstile.Id equals motionEvent.TurnikeID
-                    where turnstile.Name == drpTurnstile.Text
-                    where motionEvent.GirisTarihi > dtBaslangicZamani.Value && motionEvent.GirisTarihi < dtBitisZamani.Value
-                    select new
-                    {
-                        camera.RecordingPath,
-                        camera.CameraName,
-                        camera.Location,
-                        turnstile.Name,
-                        motionEvent.GirisTarihi,
-                        turnstile.Id
-                    };
+                             join turnstile in _turnstileManager.GetTurnstiles() on camera.TurnikeID equals turnstile.Id
+                             join motionEvent in _motionEventManager.GetMotionEvents() on turnstile.Id equals motionEvent.TurnikeID
+                             where turnstile.Name == drpTurnstile.Text
+                             where motionEvent.GirisTarihi > dtBaslangicZamani.Value && motionEvent.GirisTarihi < dtBitisZamani.Value
+                             select new
+                             {
+                                 camera.RecordingPath,
+                                 camera.CameraName,
+                                 camera.Location,
+                                 turnstile.Name,
+                                 motionEvent.GirisTarihi,
+                                 turnstile.Id
+                             };
 
                 grdMotionEvents.DataSource = tables;
 
             }
-            
+
 
             lblToplam.Text = grdMotionEvents.Rows.Count.ToString();
         }
@@ -119,7 +119,7 @@ namespace FotoCek.Client
                 string camName = selectedRow[0].Cells["CameraName"].Value.ToString();
 
 
-                 imagePath = kYolu + @"\" + camName + @"\" + GirisTarihi + ".jpg";
+                imagePath = kYolu + @"\" + camName + @"\" + GirisTarihi + ".jpg";
 
                 pctImage.Image = Image.FromFile(imagePath);
             }

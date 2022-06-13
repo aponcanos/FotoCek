@@ -47,53 +47,51 @@ namespace FotoCek.Business.Abstract
             TCPListenerServer.DataReceived += Server_DataReceived;
         }
 
-
-
-
+        string TCPDataCache = "";
         private void Server_DataReceived(object sender, SimpleTCP.Message e)
         {
+           
             var stringSeparators = new string[] { "{", "}" };
             var test1 = e.MessageString.Split(stringSeparators, StringSplitOptions.None);
 
-            var connectedDevice = ((IPEndPoint)e.TcpClient.Client.RemoteEndPoint).Address.ToString();
 
-            var ConnectedCamera = _allCameras.Where(x => x.IP == connectedDevice).FirstOrDefault();
-
-            if (ConnectedCamera != null)
+            if (!TCPDataCache.Equals(e.MessageString))
             {
-                var eventDate = DateTime.Now;
+                var connectedDevice = ((IPEndPoint)e.TcpClient.Client.RemoteEndPoint).Address.ToString();
 
-                try
+                var ConnectedCamera = _allCameras.Where(x => x.IP == connectedDevice).FirstOrDefault();
+
+                if (ConnectedCamera != null)
                 {
-                   
-                    _motionEventManager.AddMotionEvent(new MotionEvent()
+                    var eventDate = DateTime.Now;
+
+                    try
                     {
-                        GirisTarihi = eventDate,
-                        DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss"),
-                        TurnikeID = ConnectedCamera.TurnikeID
-                    });
 
-                    byte[] data = _takeSnapshotService.TakeSnapshot(ConnectedCamera, eventDate);
+                        _motionEventManager.AddMotionEvent(new MotionEvent()
+                        {
+                            GirisTarihi = eventDate,
+                            DosyaIsmi = eventDate.ToString("yyyyMMddHHmmss"),
+                            TurnikeID = ConnectedCamera.TurnikeID
+                        });
 
+                        byte[] data = _takeSnapshotService.TakeSnapshot(ConnectedCamera, eventDate);
 
-                    TCPListenerServer.Broadcast(data);
+                        TCPDataCache = e.MessageString;
+                        //  TCPListenerServer.Broadcast(data);
 
-                    //var deviceRecordingPath = ConnectedCamera.RecordingPath;
+                        //var deviceRecordingPath = ConnectedCamera.RecordingPath;
 
-                    //var DeviceRecordingPath = (from x in _allCameras where x.IP.Equals(connectedDevice) select x.RecordingPath).FirstOrDefault();
+                        //var DeviceRecordingPath = (from x in _allCameras where x.IP.Equals(connectedDevice) select x.RecordingPath).FirstOrDefault();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-
-
-
             }
 
            
-
-
         }
 
         public byte[] imageToByteArray(System.Drawing.Image imageIn)

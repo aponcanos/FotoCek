@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Concrete\Ayarlar.cs" />
     <Compile Include="Concrete\Camera.cs" />
     <Compile Include="Concrete\Log.cs" />
@@ -51,9 +52,7 @@
     <Compile Include="Concrete\Turnstile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

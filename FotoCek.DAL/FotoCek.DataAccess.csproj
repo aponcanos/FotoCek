@@ -53,11 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICameraDal.cs" />
+    <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IMotionEventDal.cs" />
     <Compile Include="Abstract\ITurnstileDal.cs" />
     <Compile Include="Concrete\ORM\AdoNet\AdoNetCameraDal.cs" />
     <Compile Include="Concrete\ORM\EntityFramework\EfCameraDal.cs" />
     <Compile Include="Concrete\ORM\EntityFramework\DatabaseContext.cs" />
+    <Compile Include="Concrete\ORM\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\ORM\EntityFramework\EfMotionEventDal.cs" />
     <Compile Include="Concrete\ORM\EntityFramework\EfTurnstileDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

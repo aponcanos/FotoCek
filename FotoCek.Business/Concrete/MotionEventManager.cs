@@ -17,6 +17,7 @@ namespace FotoCek.Business.Concrete
         public MotionEventManager(IMotionEventDal motionEvent)
         {
             _motionEvent = motionEvent;
+            
         }
 
 

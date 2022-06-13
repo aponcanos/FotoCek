@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn27 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn28 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn29 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn30 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.dtBaslangicZamani = new System.Windows.Forms.DateTimePicker();
             this.drpTurnstile = new System.Windows.Forms.ComboBox();
             this.dtBitisZamani = new System.Windows.Forms.DateTimePicker();
@@ -63,64 +63,64 @@
             // dtBaslangicZamani
             // 
             this.dtBaslangicZamani.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.dtBaslangicZamani.Font = new System.Drawing.Font("Neo Sans TR", 15F);
+            this.dtBaslangicZamani.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.dtBaslangicZamani.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBaslangicZamani.Location = new System.Drawing.Point(183, 50);
             this.dtBaslangicZamani.Name = "dtBaslangicZamani";
-            this.dtBaslangicZamani.Size = new System.Drawing.Size(291, 32);
+            this.dtBaslangicZamani.Size = new System.Drawing.Size(291, 30);
             this.dtBaslangicZamani.TabIndex = 33;
             // 
             // drpTurnstile
             // 
             this.drpTurnstile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.drpTurnstile.Font = new System.Drawing.Font("Neo Sans TR", 15F);
+            this.drpTurnstile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.drpTurnstile.FormattingEnabled = true;
             this.drpTurnstile.Location = new System.Drawing.Point(183, 15);
             this.drpTurnstile.Name = "drpTurnstile";
-            this.drpTurnstile.Size = new System.Drawing.Size(291, 32);
+            this.drpTurnstile.Size = new System.Drawing.Size(291, 33);
             this.drpTurnstile.TabIndex = 32;
             this.drpTurnstile.Click += new System.EventHandler(this.drpPlakaKonumu_Click);
             // 
             // dtBitisZamani
             // 
             this.dtBitisZamani.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.dtBitisZamani.Font = new System.Drawing.Font("Neo Sans TR", 15F);
+            this.dtBitisZamani.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.dtBitisZamani.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBitisZamani.Location = new System.Drawing.Point(183, 84);
             this.dtBitisZamani.Name = "dtBitisZamani";
-            this.dtBitisZamani.Size = new System.Drawing.Size(291, 32);
+            this.dtBitisZamani.Size = new System.Drawing.Size(291, 30);
             this.dtBitisZamani.TabIndex = 24;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("NeoSans Light TR", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 19);
+            this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 21;
             this.label6.Text = "Bitiş Zamanı";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("NeoSans Light TR", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(12, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 19);
+            this.label5.Size = new System.Drawing.Size(151, 20);
             this.label5.TabIndex = 20;
             this.label5.Text = "Başlangıç Zamanı";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("NeoSans Light TR", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
+            this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "Turnike";
             // 
@@ -134,17 +134,17 @@
             this.panel2.Location = new System.Drawing.Point(0, 132);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(800, 318);
+            this.panel2.Size = new System.Drawing.Size(1199, 420);
             this.panel2.TabIndex = 51;
             // 
             // pctImage
             // 
             this.pctImage.BackColor = System.Drawing.Color.White;
             this.pctImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pctImage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pctImage.Location = new System.Drawing.Point(546, 5);
+            this.pctImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctImage.Location = new System.Drawing.Point(847, 5);
             this.pctImage.Name = "pctImage";
-            this.pctImage.Size = new System.Drawing.Size(249, 308);
+            this.pctImage.Size = new System.Drawing.Size(347, 410);
             this.pctImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctImage.TabIndex = 53;
             this.pctImage.TabStop = false;
@@ -168,51 +168,51 @@
             this.grdMotionEvents.MasterTemplate.AllowEditRow = false;
             this.grdMotionEvents.MasterTemplate.AutoGenerateColumns = false;
             this.grdMotionEvents.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn25.EnableExpressionEditor = false;
-            gridViewTextBoxColumn25.FieldName = "RecordingPath";
-            gridViewTextBoxColumn25.HeaderText = "Kayıt Yolu";
-            gridViewTextBoxColumn25.Name = "RecordingPath";
-            gridViewTextBoxColumn25.Width = 117;
-            gridViewTextBoxColumn26.EnableExpressionEditor = false;
-            gridViewTextBoxColumn26.FieldName = "CameraName";
-            gridViewTextBoxColumn26.HeaderText = "Kamera Adı";
-            gridViewTextBoxColumn26.Name = "CameraName";
-            gridViewTextBoxColumn26.Width = 117;
-            gridViewTextBoxColumn27.EnableExpressionEditor = false;
-            gridViewTextBoxColumn27.FieldName = "Location";
-            gridViewTextBoxColumn27.HeaderText = "Lokasyon";
-            gridViewTextBoxColumn27.Name = "Location";
-            gridViewTextBoxColumn27.Width = 117;
-            gridViewTextBoxColumn28.EnableExpressionEditor = false;
-            gridViewTextBoxColumn28.FieldName = "Name";
-            gridViewTextBoxColumn28.HeaderText = "Turnike Adı";
-            gridViewTextBoxColumn28.Name = "Name";
-            gridViewTextBoxColumn28.Width = 110;
-            gridViewTextBoxColumn29.EnableExpressionEditor = false;
-            gridViewTextBoxColumn29.FieldName = "GirisTarihi";
-            gridViewTextBoxColumn29.HeaderText = "GirisTarihi";
-            gridViewTextBoxColumn29.Name = "GirisTarihi";
-            gridViewTextBoxColumn29.Width = 40;
-            gridViewTextBoxColumn30.EnableExpressionEditor = false;
-            gridViewTextBoxColumn30.FieldName = "Id";
-            gridViewTextBoxColumn30.HeaderText = "TurnikeID";
-            gridViewTextBoxColumn30.Name = "Id";
-            gridViewTextBoxColumn30.Width = 44;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "RecordingPath";
+            gridViewTextBoxColumn1.HeaderText = "Kayıt Yolu";
+            gridViewTextBoxColumn1.Name = "RecordingPath";
+            gridViewTextBoxColumn1.Width = 155;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "CameraName";
+            gridViewTextBoxColumn2.HeaderText = "Kamera Adı";
+            gridViewTextBoxColumn2.Name = "CameraName";
+            gridViewTextBoxColumn2.Width = 226;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Location";
+            gridViewTextBoxColumn3.HeaderText = "Lokasyon";
+            gridViewTextBoxColumn3.Name = "Location";
+            gridViewTextBoxColumn3.Width = 85;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Name";
+            gridViewTextBoxColumn4.HeaderText = "Turnike Adı";
+            gridViewTextBoxColumn4.Name = "Name";
+            gridViewTextBoxColumn4.Width = 151;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "GirisTarihi";
+            gridViewTextBoxColumn5.HeaderText = "Giriş Tarihi";
+            gridViewTextBoxColumn5.Name = "GirisTarihi";
+            gridViewTextBoxColumn5.Width = 120;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Id";
+            gridViewTextBoxColumn6.HeaderText = "Turnike ID";
+            gridViewTextBoxColumn6.Name = "Id";
+            gridViewTextBoxColumn6.Width = 109;
             this.grdMotionEvents.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn25,
-            gridViewTextBoxColumn26,
-            gridViewTextBoxColumn27,
-            gridViewTextBoxColumn28,
-            gridViewTextBoxColumn29,
-            gridViewTextBoxColumn30});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.grdMotionEvents.MasterTemplate.EnableGrouping = false;
             this.grdMotionEvents.MasterTemplate.ShowFilteringRow = false;
             this.grdMotionEvents.MasterTemplate.ShowRowHeaderColumn = false;
-            this.grdMotionEvents.MasterTemplate.ViewDefinition = tableViewDefinition5;
+            this.grdMotionEvents.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.grdMotionEvents.Name = "grdMotionEvents";
             this.grdMotionEvents.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.grdMotionEvents.ShowGroupPanel = false;
-            this.grdMotionEvents.Size = new System.Drawing.Size(541, 308);
+            this.grdMotionEvents.Size = new System.Drawing.Size(842, 410);
             this.grdMotionEvents.TabIndex = 52;
             this.grdMotionEvents.Text = "radGridView2";
             this.grdMotionEvents.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.grdMotionEvents_CellClick);
@@ -223,7 +223,7 @@
             this.pctGirenKisiResmi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctGirenKisiResmi.Location = new System.Drawing.Point(5, 5);
             this.pctGirenKisiResmi.Name = "pctGirenKisiResmi";
-            this.pctGirenKisiResmi.Size = new System.Drawing.Size(790, 308);
+            this.pctGirenKisiResmi.Size = new System.Drawing.Size(1189, 410);
             this.pctGirenKisiResmi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctGirenKisiResmi.TabIndex = 1;
             this.pctGirenKisiResmi.TabStop = false;
@@ -244,28 +244,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 132);
+            this.panel1.Size = new System.Drawing.Size(1199, 132);
             this.panel1.TabIndex = 50;
             // 
             // lblToplam
             // 
             this.lblToplam.AutoSize = true;
-            this.lblToplam.Font = new System.Drawing.Font("NeoSans Light TR", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblToplam.ForeColor = System.Drawing.Color.White;
             this.lblToplam.Location = new System.Drawing.Point(569, 84);
             this.lblToplam.Name = "lblToplam";
-            this.lblToplam.Size = new System.Drawing.Size(22, 22);
+            this.lblToplam.Size = new System.Drawing.Size(21, 24);
             this.lblToplam.TabIndex = 36;
             this.lblToplam.Text = "0";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("NeoSans Light TR", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(491, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 22);
+            this.label1.Size = new System.Drawing.Size(98, 24);
             this.label1.TabIndex = 35;
             this.label1.Text = "Toplam : ";
             // 
@@ -297,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1199, 552);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Raporlama";
